@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import type { ScenarioDef } from '@/lib/lab/types';
+import type { ScenarioDef, ScenarioResult, ChoiceOption, SkillLevel } from '@/lib/lab/types';
 import { scoreScenario, LEVEL_LABEL } from '@/lib/lab/scoring';
 import { recordLabAttempt } from '@/app/lab/actions';
 
@@ -18,10 +18,10 @@ export function ScenarioPlayer({ slug, def }: ScenarioPlayerProps) {
   const [error, setError] = useState<string | null>(null);
 
   const currentStepIndex = path.length;
-  const currentStep = def.steps[currentStepIndex];
-  const isFinished = currentStepIndex >= def.steps.length;
+  const currentStep = def?.steps ? def.steps[currentStepIndex] : undefined;
+  const isFinished = def?.steps ? currentStepIndex >= def.steps.length : false;
 
-  const result = isFinished ? scoreScenario(def, path) : null;
+  const result: ScenarioResult | null = isFinished && def ? scoreScenario(def, path) : null;
 
   const handleSelect = (optionId: string) => {
     if (isFinished) return;
@@ -53,12 +53,21 @@ export function ScenarioPlayer({ slug, def }: ScenarioPlayerProps) {
         }
       });
       setSubmitted(true);
-    } catch (err: any) {
-      setError(err?.message || 'Failed to submit attempt.');
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : 'Failed to submit attempt.';
+      setError(msg);
     } finally {
       setIsSubmitting(false);
     }
   };
+
+  if (!def || !def.steps) {
+    return (
+      <div className="p-6 rounded-2xl bg-slate-900 border border-slate-800 text-slate-100 max-w-2xl mx-auto">
+        <p className="text-sm text-slate-400">Loading scenario definitions...</p>
+      </div>
+    );
+  }
 
   if (isFinished && result) {
     const passed = result.gatePassed && result.passed;
@@ -78,12 +87,12 @@ export function ScenarioPlayer({ slug, def }: ScenarioPlayerProps) {
           </p>
         </div>
 
-        {result.reasons.length > 0 && (
+        {result.reasons && result.reasons.length > 0 && (
           <div className="p-4 rounded-xl bg-amber-950/40 border border-amber-800/60 space-y-2">
             <span className="text-xs font-bold text-amber-300 uppercase tracking-wider block">
               Skill Observations
             </span>
-            {result.reasons.map((r, i) => (
+            {result.reasons.map((r: string, i: number) => (
               <p key={i} className="text-xs text-amber-100">{r}</p>
             ))}
           </div>
@@ -92,14 +101,18 @@ export function ScenarioPlayer({ slug, def }: ScenarioPlayerProps) {
         <div className="space-y-3">
           <h3 className="text-sm font-semibold text-slate-300">Competency Rubric</h3>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {Object.entries(result.skills).map(([skill, lvl]) => (
-              <div key={skill} className="bg-slate-800/60 border border-slate-700/60 p-3 rounded-xl text-center">
-                <span className="text-[11px] text-slate-400 capitalize block mb-1">{skill}</span>
-                <span className="text-xs font-mono font-bold text-slate-200">
-                  {LEVEL_LABEL[lvl] || lvl}
-                </span>
-              </div>
-            ))}
+            {Object.entries(result.skills).map(([skill, lvl]) => {
+              const typedLevel = lvl as SkillLevel;
+              const displayLabel = LEVEL_LABEL[typedLevel] ?? typedLevel;
+              return (
+                <div key={skill} className="bg-slate-800/60 border border-slate-700/60 p-3 rounded-xl text-center">
+                  <span className="text-[11px] text-slate-400 capitalize block mb-1">{skill}</span>
+                  <span className="text-xs font-mono font-bold text-slate-200">
+                    {displayLabel}
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </div>
 
@@ -154,7 +167,7 @@ export function ScenarioPlayer({ slug, def }: ScenarioPlayerProps) {
           </div>
 
           <div className="space-y-2.5">
-            {currentStep.options.map(opt => (
+            {currentStep.options.map((opt: ChoiceOption) => (
               <button
                 key={opt.id}
                 type="button"
