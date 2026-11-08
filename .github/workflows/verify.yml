@@ -1,0 +1,34 @@
+﻿name: Verify Build & Simulation Lab
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate Lab Scenarios Graph
+        run: npm run validate:lab
+
+      - name: Next.js Build & Typecheck
+        run: npm run build
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: https://mock-supabase-project.supabase.co
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: mock-anon-key-123456789
+          CREDENTIAL_SALT: test-salt-env-variable
