@@ -48,7 +48,6 @@ export function ScenarioPlayer({ scenarioSlug, title, description, steps }: Scen
       return;
     }
 
-    // Submit complete path to server-side action
     try {
       setIsSubmitting(true);
       setError(null);
@@ -100,7 +99,6 @@ export function ScenarioPlayer({ scenarioSlug, title, description, steps }: Scen
           </div>
         </div>
 
-        {/* Feedback List */}
         {result.feedback.length > 0 && (
           <div className="bg-rose-950/30 border border-rose-500/40 p-4 rounded-xl space-y-2">
             <span className="text-xs font-bold text-rose-300 uppercase tracking-wider block">Boundary Alerts</span>
@@ -110,7 +108,6 @@ export function ScenarioPlayer({ scenarioSlug, title, description, steps }: Scen
           </div>
         )}
 
-        {/* Multi-Skill Rubric Levels */}
         <div className="space-y-3">
           <h3 className="text-sm font-semibold text-gray-200">Rubric Competency Evaluation</h3>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -125,7 +122,6 @@ export function ScenarioPlayer({ scenarioSlug, title, description, steps }: Scen
           </div>
         </div>
 
-        {/* Credential Issuance Status */}
         {result.credentialId ? (
           <div className="bg-brand-gold/10 border border-brand-gold/30 p-4 rounded-xl flex items-center justify-between gap-4">
             <div className="flex items-center gap-3">
@@ -162,7 +158,6 @@ export function ScenarioPlayer({ scenarioSlug, title, description, steps }: Scen
 
   return (
     <div className="glass-panel p-6 sm:p-8 rounded-2xl space-y-6 max-w-3xl mx-auto border border-white/10">
-      {/* Scenario Progress Header */}
       <div className="flex items-center justify-between border-b border-white/10 pb-4">
         <div>
           <span className="text-[10px] font-mono uppercase text-brand-peach font-bold">Interactive Scenario Lab</span>
@@ -181,14 +176,12 @@ export function ScenarioPlayer({ scenarioSlug, title, description, steps }: Scen
         </div>
       )}
 
-      {/* Step Prompt */}
       {currentStep && (
         <div className="space-y-4">
           <div className="bg-brand-surface/70 border border-white/10 rounded-xl p-4">
             <p className="text-sm text-gray-200 font-medium">{currentStep.prompt}</p>
           </div>
 
-          {/* Options */}
           <div className="space-y-2.5">
             {currentStep.options.map(opt => {
               const isSelected = currentSelection === opt.id;
@@ -218,7 +211,6 @@ export function ScenarioPlayer({ scenarioSlug, title, description, steps }: Scen
         </div>
       )}
 
-      {/* Footer Controls */}
       <div className="pt-4 border-t border-white/10 flex items-center justify-between">
         <button
           type="button"
