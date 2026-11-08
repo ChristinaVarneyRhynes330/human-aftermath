@@ -1,0 +1,86 @@
+[
+ {
+  "slug": "observe-interpret-diagnose",
+  "type": "classify",
+  "title": "Observation, interpretation, diagnosis or assumption?",
+  "audience": "public",
+  "definition": {
+   "purpose": "Separate what can be seen from what is inferred, so you stay curious instead of diagnosing.",
+   "instruction": "A teacher notices a student, Taylor, during a lab. Sort each statement. You can skip this activity at any time.",
+   "accessibility_alternative": "Each statement has its own labeled select menu; no dragging is needed.",
+   "categories": [
+    {
+     "id": "observation",
+     "label": "Observation",
+     "hint": "Something you could see or hear and record without interpreting."
+    },
+    {
+     "id": "interpretation",
+     "label": "Interpretation",
+     "hint": "A meaning someone attaches to what they saw."
+    },
+    {
+     "id": "diagnosis",
+     "label": "Diagnosis",
+     "hint": "A clinical label that only a qualified professional can assess."
+    },
+    {
+     "id": "assumption",
+     "label": "Assumption",
+     "hint": "A claim about causes or history with no information behind it yet."
+    }
+   ],
+   "items": [
+    {
+     "id": "i1",
+     "text": "Taylor has not opened the notebook for 20 minutes.",
+     "answer": "observation",
+     "why": "It can be seen and timed. It says nothing about why."
+    },
+    {
+     "id": "i2",
+     "text": "Taylor doesn't care about this class.",
+     "answer": "interpretation",
+     "why": "This attaches a motive to the behavior. Disengagement has many possible causes."
+    },
+    {
+     "id": "i3",
+     "text": "Taylor has PTSD.",
+     "answer": "diagnosis",
+     "why": "Only a qualified clinician can assess this, and nothing observed here would establish it."
+    },
+    {
+     "id": "i4",
+     "text": "Something bad must have happened at home.",
+     "answer": "assumption",
+     "why": "It invents a history. Taylor could be tired, ill, upset about a friendship, or something else entirely."
+    },
+    {
+     "id": "i5",
+     "text": "Taylor said, 'Leave me alone,' when nudged.",
+     "answer": "observation",
+     "why": "A direct quote is an observation. What it means is a separate question."
+    },
+    {
+     "id": "i6",
+     "text": "Taylor is shutting down because of past trauma.",
+     "answer": "assumption",
+     "why": "It claims both a mechanism and a history. Neither is supported by what was observed."
+    },
+    {
+     "id": "i7",
+     "text": "Taylor seems anxious.",
+     "answer": "interpretation",
+     "why": "'Seems' signals an impression. It is not a diagnosis, but it still goes beyond what was observed."
+    },
+    {
+     "id": "i8",
+     "text": "Taylor's head has been down since class began.",
+     "answer": "observation",
+     "why": "Observable and specific."
+    }
+   ],
+   "debrief": "A responsible next step is to describe what you saw, hold your interpretations lightly, and ask Taylor what would help."
+  }
+ }
+]

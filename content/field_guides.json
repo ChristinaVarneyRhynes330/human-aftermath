@@ -1,0 +1,146 @@
+[
+ {
+  "id": "res_01",
+  "num": "01",
+  "title": "Trauma Literacy Field Guide",
+  "subtitle": "Foundational Taxonomy & Human Adaptation",
+  "module": "Module 1",
+  "summary": "A two-page executive reference guide defining core trauma concepts, dispelling linguistic inflation, and establishing the foundational frameworks of human adaptation.",
+  "content": "<h3>1. Core Taxonomy</h3>\n<ul>\n<li><strong>Everyday Stress:</strong> Routine physiological and emotional tension arising from predictable life demands. Accompanied by natural autonomic activation followed by predictable parasympathetic recovery. Biological purpose: Motivation, focus, adaptation.</li>\n<li><strong>Chronic Adversity:</strong> Compounding, prolonged hardships (poverty, systemic discrimination, chronic illness, chaotic environments) that strain reserves over time. Measured in physiology as allostatic load\u2014the cumulative biological cost of chronic stress mobilization without rest.</li>\n<li><strong>Potentially Traumatic Event (PTE):</strong> An objective crisis involving actual or threatened death, serious physical injury, sexual violation, or catastrophic terror. The qualifier 'potentially' acknowledges that while the event is severe, psychological outcome varies based on context and support.</li>\n<li><strong>Post-Traumatic Stress Disorder (PTSD):</strong> A specific clinical diagnosis occurring in a minority of trauma-exposed individuals, characterized by persistent re-experiencing, active avoidance, negative mood/cognition alterations, and hyperarousal lasting longer than one month with significant functional impairment.</li>\n</ul>\n<h3>2. The Foundational Triad</h3>\n<p class=\"p-3 bg-stone-100 rounded-lg font-mono text-sm\">THE EVENT (Objective fact) \u2500\u2500\u25b6 THE EXPERIENCE (Subjective appraisal) \u2500\u2500\u25b6 THE RESPONSE (Adaptation)</p>\n<p>You cannot predict the Response solely from the Event. Subjective appraisal is filtered by developmental age, perceived control, prior allostatic load, and immediate post-event social attunement.</p>\n<h3>3. Core Principles</h3>\n<ol class=\"list-decimal pl-5 space-y-1\">\n<li>Observation is not etiology: Identical behaviors arise from radically different causes.</li>\n<li>Probability is not destiny: Adversity increases statistical risk; it does not write life scripts.</li>\n<li>Resilience is ecological: Co-produced by relationships and environments, not isolated grit.</li>\n<li>Armor served a purpose: Defensive behaviors began as intelligent evolutionary survival strategies.</li>\n<li>Explanation is not an excuse: Understanding why armor formed never waives present accountability.</li>\n</ol>"
+ },
+ {
+  "id": "res_02",
+  "num": "02",
+  "title": "Human Stress-System Visual Guide",
+  "subtitle": "Autonomic Balance, Brain Networks & HPA Dynamics",
+  "module": "Module 2",
+  "summary": "Plain-language anatomical map of autonomic branches (sympathetic, ventral vagal, dorsal vagal), distributed brain networks (Salience, CEN, DMN), and neuroendocrine HPA-axis hypocortisolism.",
+  "content": "<h3>1. The Autonomic Nervous System: Dynamic Regulation</h3>\n<ul>\n<li><strong>Sympathetic Branch (The Accelerator):</strong> Mobilizes glucose, increases heart rate, dilates airways, and primes skeletal muscles for fight-or-flight survival.</li>\n<li><strong>Parasympathetic Ventral Vagal (The Social Brake):</strong> Promotes resting digestion, heart rate variability, social engagement, and facial attunement in safe environments.</li>\n<li><strong>Parasympathetic Dorsal Vagal (The Emergency Brake / Freeze):</strong> Defensive immobilization, metabolic conservation, numbness, and fainting when physical escape is impossible.</li>\n</ul>\n<h3>2. Brain Networks: Beyond the 'Reptilian Brain' Myth</h3>\n<ul>\n<li><strong>Salience / Threat Network (Amygdala, Anterior Insula):</strong> Rapidly detects novelty, danger, and visceral emotional significance.</li>\n<li><strong>Context & Memory Network (Hippocampus):</strong> Stamps events with time, place, and sequence, filing them in the past.</li>\n<li><strong>Central Executive Network (Dorsolateral Prefrontal Cortex):</strong> Governs working memory, goal-directed behavior, impulse control, and emotional regulation.</li>\n<li><strong>Default Mode Network (Medial Prefrontal, Posterior Cingulate):</strong> Active during self-reflection, autobiographical memory, and social narrative.</li>\n</ul>\n<h3>3. Stress Hormones & Hypocortisolism</h3>\n<p>While acute stress causes temporary cortisol surges, chronic developmental trauma frequently recalibrates the HPA axis toward <strong>hypocortisolism</strong> (blunted baseline cortisol) combined with heightened glucocorticoid receptor sensitivity.</p>"
+ },
+ {
+  "id": "res_03",
+  "num": "03",
+  "title": "PTSD / C-PTSD Comparison Guide",
+  "subtitle": "DSM-5-TR vs. ICD-11 Diagnostic Differences",
+  "module": "Module 5",
+  "summary": "Clear comparative matrix distinguishing single-incident PTSD from ICD-11 Complex PTSD (PTSD + Disturbances in Self-Organization), detailing DSO clusters: affect dysregulation, negative self-concept, and relational disturbances.",
+  "content": "<h3>Diagnostic Taxonomy Comparison</h3>\n<div class=\"overflow-x-auto my-3\"><table class=\"w-full text-left text-sm border-collapse\">\n<thead><tr class=\"bg-stone-200\"><th class=\"p-2\">Feature</th><th class=\"p-2\">DSM-5-TR PTSD</th><th class=\"p-2\">ICD-11 PTSD</th><th class=\"p-2\">ICD-11 Complex PTSD (C-PTSD)</th></tr></thead>\n<tbody>\n<tr class=\"border-b\"><td class=\"p-2 font-medium\">Core Trigger</td><td class=\"p-2\">Single or multiple PTEs</td><td class=\"p-2\">Single or multiple PTEs</td><td class=\"p-2\">Chronic, repeated, or inescapable interpersonal trauma (abuse, captivity, genocide)</td></tr>\n<tr class=\"border-b\"><td class=\"p-2 font-medium\">Re-experiencing</td><td class=\"p-2\">Intrusive memories, nightmares, flashbacks</td><td class=\"p-2\">Reliving in the present with vividness/flashbacks</td><td class=\"p-2\">Reliving in the present with vividness/flashbacks</td></tr>\n<tr class=\"border-b\"><td class=\"p-2 font-medium\">Avoidance</td><td class=\"p-2\">Internal (thoughts) & External (reminders)</td><td class=\"p-2\">Active avoidance of reminders</td><td class=\"p-2\">Active avoidance of reminders</td></tr>\n<tr class=\"border-b\"><td class=\"p-2 font-medium\">Threat Perception</td><td class=\"p-2\">Hyperarousal & reactivity alterations</td><td class=\"p-2\">Persistent sense of current threat</td><td class=\"p-2\">Persistent sense of current threat</td></tr>\n<tr class=\"border-b bg-amber-50\"><td class=\"p-2 font-medium text-amber-900\">Disturbances in Self-Organization (DSO)</td><td class=\"p-2 text-stone-500\">Not recognized as separate disorder (partly in mood/dissociative subtype)</td><td class=\"p-2 text-stone-500\">Not present</td><td class=\"p-2 text-amber-900\"><strong>Mandatory:</strong> Affect Dysregulation, Persistent Negative Self-Concept, Relational Disturbances</td></tr>\n</tbody>\n</table></div>\n<p class=\"text-xs text-stone-600\">*Note: Only qualified mental health clinicians can diagnose psychiatric disorders using structured clinical interviews (CAPS-5, ITQ).*</p>"
+ },
+ {
+  "id": "res_04",
+  "num": "04",
+  "title": "Dissociation Explained",
+  "subtitle": "From Everyday Absorption to Clinical Fragmentation",
+  "module": "Module 3",
+  "summary": "Visual continuum mapping normative absorption (daydreaming, highway hypnosis) to protective survival detachment and formal clinical depersonalization, derealization, and structural dissociation.",
+  "content": "<h3>The Dissociation Spectrum</h3>\n<ul>\n<li><strong>Level 1: Everyday Absorption:</strong> Daydreaming, getting lost in a captivating book, or 'highway hypnosis.' Normal cognitive zoning out with immediate return to awareness.</li>\n<li><strong>Level 2: Acute Protective Detachment:</strong> During severe sudden trauma, the mind unplugs conscious awareness from overwhelming physical pain or terror, acting as biological anesthesia.</li>\n<li><strong>Level 3: Depersonalization:</strong> Persistent or recurrent feeling of being detached from one's own physical body or mental processes (e.g. feeling like an outside observer, robot, or looking down from ceiling).</li>\n<li><strong>Level 4: Derealization:</strong> Persistent sensation that the external environment is dreamlike, foggy, two-dimensional, artificial, or muffled behind glass.</li>\n<li><strong>Level 5: Structural Compartmentalization:</strong> Divisions in integrated identity and memory resulting from severe childhood relational trauma (e.g. Dissociative Amnesia, DID).</li>\n</ul>"
+ },
+ {
+  "id": "res_05",
+  "num": "05",
+  "title": "Trauma Across the Lifespan Map",
+  "subtitle": "Developmental Timing, Hardware & Relational Buffers",
+  "module": "Module 4",
+  "summary": "Overview of how developmental timing modifies trauma expression and adaptation across prenatal, infancy, childhood, adolescence, adulthood, and older age.",
+  "content": "<h3>Lifespan Epochs & Trauma Adaptation</h3>\n<ul>\n<li><strong>Prenatal:</strong> Placental 11\u03b2-HSD2 enzyme buffers maternal cortisol; probabilistic developmental vulnerability, heavily moderated by post-natal caregiving and safety.</li>\n<li><strong>Infancy (0\u20133):</strong> Inability to self-soothe; total reliance on caregiver co-regulation. Paradox of the frightening caregiver creates disorganized attachment patterns.</li>\n<li><strong>Childhood (4\u201311):</strong> Egocentrism and magical thinking lead children to internalize blame ('I am bad') to maintain psychological attachment to unsafe caregivers. Converts distress into toxic shame.</li>\n<li><strong>Adolescence (12\u201318):</strong> Neural remodeling and synaptic pruning; peak dopamine reward drive vs. developing prefrontal brakes. Trauma intersects with identity, peer belonging, and risk behaviors.</li>\n<li><strong>Adulthood:</strong> Trauma shatters core assumptions of safety and predictability. Adult attachment remains plastic: 'Earned Security' is achievable through healing relationships.</li>\n<li><strong>Older Adulthood:</strong> Late-Onset Stress Symptomatology (LOSS). Retirement, bereavement, and medical decline remove lifelong coping distraction shields, allowing suppressed trauma to resurface.</li>\n</ul>"
+ },
+ {
+  "id": "res_06",
+  "num": "06",
+  "title": "The Context Matrix Worksheet",
+  "subtitle": "10-Dimension Analysis Guide for Educators & Allies",
+  "module": "Module 1",
+  "summary": "A structured diagnostic-avoidance worksheet for educators, allies, leaders, and supporters to systematically analyze 10 environmental and developmental variables surrounding an experience before making assumptions about behavior.",
+  "content": "<h3>The 10 Contextual Inquiries</h3>\n<ol class=\"list-decimal pl-5 space-y-2\">\n<li><strong>When in Time?</strong> Historical context, community atmosphere, duration of event.</li>\n<li><strong>At What Developmental Stage?</strong> Infant, child, teenager, adult, elder. Available cognitive and linguistic hardware.</li>\n<li><strong>In What Relationship?</strong> Stranger harm vs. caregiver betrayal. Power dynamics and trust violations.</li>\n<li><strong>Under What Power Conditions?</strong> Was escape possible? Was the person trapped, coerced, or immobilized?</li>\n<li><strong>With What Perceived Agency?</strong> Did the person have any micro-choice, action, voice, or ability to protect another?</li>\n<li><strong>With What Cumulative Load?</strong> Prior adversity, poverty, discrimination, medical strain, exhaustion.</li>\n<li><strong>With What Immediate Buffering?</strong> Warmth, belief, physical safety, and attunement immediately post-event.</li>\n<li><strong>With What Resources?</strong> Safe housing, economic reserves, legal protection, healthcare access.</li>\n<li><strong>With What Cultural Meaning?</strong> How does their community, spiritual tradition, or family interpret this distress?</li>\n<li><strong>Is the Danger Actually Over?</strong> Past threat vs. active, ongoing violence, poverty, or discrimination.</li>\n</ol>\n<p class=\"mt-4 p-3 bg-emerald-50 text-emerald-900 rounded font-medium text-sm\">Rule of Thumb: Insufficient context produces overconfident, flawed interpretations of human behavior. Observation is not etiology.</p>"
+ },
+ {
+  "id": "res_07",
+  "num": "07",
+  "title": "Coping & Adaptation Map",
+  "subtitle": "Functional Survival Armor vs. Peacetime Prison",
+  "module": "Module 6",
+  "summary": "Reframing survival strategies (avoidance, substance use, perfectionism, fawning, control) from pathology to ingenious evolutionary adaptations, while examining long-term relational costs.",
+  "content": "<h3>Deconstructing Survival Armor</h3>\n<div class=\"space-y-3\">\n<div class=\"p-3 bg-stone-100 rounded\"><strong>Hypervigilance & Suspicion:</strong><br><span class=\"text-emerald-800\">Survival Function:</span> Scans environments to anticipate danger before it strikes.<br><span class=\"text-rose-800\">Peacetime Cost:</span> Chronic exhaustion, insomnia, inability to trust safe partners.</div>\n<div class=\"p-3 bg-stone-100 rounded\"><strong>Emotional Numbing & Dissociation:</strong><br><span class=\"text-emerald-800\">Survival Function:</span> Mental anesthesia preventing overwhelm during inescapable pain.<br><span class=\"text-rose-800\">Peacetime Cost:</span> Prevents feeling joy, warmth, intimacy, and presence with loved ones.</div>\n<div class=\"p-3 bg-stone-100 rounded\"><strong>Compulsive Fawning (People-Pleasing):</strong><br><span class=\"text-emerald-800\">Survival Function:</span> Suppressing boundaries to appease unpredictable or aggressive figures.<br><span class=\"text-rose-800\">Peacetime Cost:</span> Total loss of personal identity, chronic burnout, exploitation.</div>\n<div class=\"p-3 bg-stone-100 rounded\"><strong>Workaholism & Over-Functioning:</strong><br><span class=\"text-emerald-800\">Survival Function:</span> Chronic flight response: relentless motion keeps painful memories at bay.<br><span class=\"text-rose-800\">Peacetime Cost:</span> Physical collapse, burnout, inability to tolerate quiet or rest.</div>\n</div>"
+ },
+ {
+  "id": "res_08",
+  "num": "08",
+  "title": "The Evidence Compass Key",
+  "subtitle": "Operational Guide to 7 Knowledge Tiers",
+  "module": "Module 2",
+  "summary": "The 7 knowledge tiers explained with criteria, evaluation questions, and citation guidelines.",
+  "content": "<h3>The 7 Knowledge Classifications</h3>\n<ul>\n<li><strong>[Established Knowledge]:</strong> Substantial empirical consensus, replicated trials, major guidelines (WHO, APA, VA/DoD, NICE).</li>\n<li><strong>[Emerging Evidence]:</strong> Active, promising clinical trials with growing support, awaiting large-scale replication.</li>\n<li><strong>[Theory / Clinical Model]:</strong> Useful conceptual heuristic (Window of Tolerance, IFS) that should not be mistaken for literal biological hardware.</li>\n<li><strong>[Cultural / Traditional]:</strong> Culturally situated healing frameworks, philosophies, and communal rituals operating on distinct foundations.</li>\n<li><strong>[Lived-Experience Lens]:</strong> First-person phenomenological language used by survivors; valid and vital, but distinct from scientific mechanics.</li>\n<li><strong>[Metaphor]:</strong> An explanatory teaching device or poetic analogy; illuminating, but not literal biology.</li>\n<li><strong>[Uncertain / Contested]:</strong> Mixed empirical data, conflicting professional guidelines, or methodological debates.</li>\n</ul>"
+ },
+ {
+  "id": "res_09",
+  "num": "09",
+  "title": "Trauma Claim Translator",
+  "subtitle": "Converting Popular Tropes into Scientific Precision",
+  "module": "Module 3",
+  "summary": "Converts 12 popular social-media trauma slogans into scientifically defensible, nuanced statements.",
+  "content": "<h3>12 Translated Statements</h3>\n<div class=\"space-y-2 text-sm\">\n<div class=\"p-2 border rounded\"><strong>Popular Claim:</strong> \"Trauma rewires the brain.\"<br><strong>Scientific Precision:</strong> Severe stress alters functional connectivity and threat calibration across distributed neural networks, which retain neuroplasticity and can recalibrate in safe environments.</div>\n<div class=\"p-2 border rounded\"><strong>Popular Claim:</strong> \"Trauma is stored in the body.\"<br><strong>Scientific Precision:</strong> Muscles and tissues do not store autobiographical memory files. Trauma conditions autonomic threat biases, visceral interoceptive sensitivity, and neuromuscular postural defense habits.</div>\n<div class=\"p-2 border rounded\"><strong>Popular Claim:</strong> \"Your amygdala is broken.\"<br><strong>Scientific Precision:</strong> The amygdala is intact and functioning adaptively as a threat sensor; PTSD involves altered communication between the Salience Network and prefrontal executive control networks.</div>\n<div class=\"p-2 border rounded\"><strong>Popular Claim:</strong> \"ACE scores predict your destiny.\"<br><strong>Scientific Precision:</strong> ACE scores measure population-level statistical risk trends, not individual destiny. Neuroplasticity, subsequent relationships, and protective factors heavily shape individual outcomes.</div>\n<div class=\"p-2 border rounded\"><strong>Popular Claim:</strong> \"Ketamine resets the brain.\"<br><strong>Scientific Precision:</strong> Ketamine blocks NMDA receptors, triggering a transient BDNF synaptogenesis surge that temporarily opens a 48-hour neuroplastic window for therapeutic integration.</div>\n<div class=\"p-2 border rounded\"><strong>Popular Claim:</strong> \"You have to remember everything to heal.\"<br><strong>Scientific Precision:</strong> Functional recovery and autonomic regulation do not require reconstructing an unbroken historical narrative. Integration focuses on present safety.</div>\n</div>"
+ },
+ {
+  "id": "res_10",
+  "num": "10",
+  "title": "How to Support Someone in Pain",
+  "subtitle": "Active Witnessing & Psychological First Aid",
+  "module": "Module 8",
+  "summary": "Concrete guide to psychological first aid, active witnessing, and holding space without interrogating.",
+  "content": "<h3>Supportive Witnessing Principles</h3>\n<ul>\n<li><strong>Listen Without Investigating:</strong> Do not demand details, timelines, or proof. Never ask 'Why didn't you...?' or press for graphic descriptions.</li>\n<li><strong>Acknowledge and Validate:</strong> 'Thank you for telling me.' 'You don't need to share more than you want to.' 'I believe you.'</li>\n<li><strong>Restore Choice & Agency:</strong> 'Would you like me to listen, help you think through options, or help you find professional support?'</li>\n<li><strong>Avoid Harmful Clich\u00e9s:</strong> Never say 'Everything happens for a reason,' 'At least you survived,' or 'I know exactly how you feel.'</li>\n<li><strong>Respect Boundaries:</strong> Maintain privacy and do not gossip. Offer calm, reliable presence rather than immediate fixing.</li>\n</ul>"
+ },
+ {
+  "id": "res_11",
+  "num": "11",
+  "title": "Support Without Diagnosing Checklist",
+  "subtitle": "Boundaries for Allies, Managers & Partners",
+  "module": "Module 8",
+  "summary": "Checklist for allies, managers, and friends: phrases to use, traps to avoid, and referral boundaries.",
+  "content": "<h3>The Supporter's Boundary Checklist</h3>\n<ul class=\"space-y-1\">\n<li>[ ] I remember that I am a friend/colleague/partner, not this person's therapist.</li>\n<li>[ ] I focus on observable behaviors and practical needs rather than guessing psychiatric diagnoses.</li>\n<li>[ ] I give the person choices about how much to share and what kind of support they want.</li>\n<li>[ ] I avoid taking over their life or making decisions on their behalf ('paternalism').</li>\n<li>[ ] I know when distress exceeds my capacity and gently bridge to professional resources.</li>\n<li>[ ] I maintain my own emotional and physical boundaries to prevent secondary traumatic stress and burnout.</li>\n</ul>"
+ },
+ {
+  "id": "res_12",
+  "num": "12",
+  "title": "Treatment Landscape Guide",
+  "subtitle": "Evidence-Graded Matrix Across Modalities",
+  "module": "Module 7",
+  "summary": "Multi-page comparative clinical chart comparing PE, CPT, EMDR, medications, somatic adjuncts, and emerging ketamine/MDMA.",
+  "content": "<h3>Evidence-Graded Trauma Modalities</h3>\n<ul>\n<li><strong>First-Line Guideline Supported (Strong):</strong> Prolonged Exposure (PE), Cognitive Processing Therapy (CPT), Trauma-Focused CBT (TF-CBT), Eye Movement Desensitization and Reprocessing (EMDR). Recommended by APA, VA/DoD, NICE, and WHO.</li>\n<li><strong>Specialized Complex Presentations (Promising):</strong> DBT-PTSD (validated in Bohus trials for severe emotion dysregulation and childhood abuse); Narrative Exposure Therapy (NET) for refugees and collective conflict.</li>\n<li><strong>Established Pharmacotherapy:</strong> SSRIs (Sertraline, Paroxetine) and SNRIs (Venlafaxine). Prazosin for PTSD-associated nightmares. <em>Strong recommendation against benzodiazepines and cannabis.</em></li>\n<li><strong>Complementary & Somatic Approaches (Adjunctive):</strong> Trauma-sensitive yoga, mindfulness, movement, and Internal Family Systems (IFS). Excellent for stabilization, bodily regulation, and affect tolerance; high study heterogeneity; best used alongside evidence-based therapies.</li>\n<li><strong>Emerging / Investigational Medical Treatments:</strong> Ketamine (FDA-approved Esketamine for depression; emerging PTSD trials; opens BDNF neuroplastic window); MDMA-assisted therapy and Psilocybin (active clinical trial development, not yet approved routine first-line clinic care).</li>\n</ul>"
+ },
+ {
+  "id": "res_13",
+  "num": "13",
+  "title": "Questions to Ask a Mental-Health Professional",
+  "subtitle": "Client Empowerment & Treatment Pacing",
+  "module": "Module 7",
+  "summary": "Empowering questions for prospective therapy clients regarding modalities, evidence, and treatment pacing.",
+  "content": "<h3>Inquiries for Your First Consultation</h3>\n<ol class=\"list-decimal pl-5 space-y-1\">\n<li>What specific training and clinical supervision have you completed in evidence-based trauma treatment?</li>\n<li>What specific therapeutic modalities do you practice (e.g. CPT, PE, EMDR, TF-CBT)?</li>\n<li>How do you ensure that safety, grounding, and stabilization are established before processing traumatic memories?</li>\n<li>What is your policy regarding client pacing and agency during sessions?</li>\n<li>How do you assess progress, and what happens if a particular approach does not feel helpful?</li>\n<li>What experience do you have working with my cultural background, identity, or specific life context?</li>\n</ol>"
+ },
+ {
+  "id": "res_14",
+  "num": "14",
+  "title": "Screening Is Not Diagnosis",
+  "subtitle": "Understanding CAPS-5, PCL-5 & ACE Measures",
+  "module": "Module 5",
+  "summary": "Reference guide explaining CAPS-5, PCL-5, and ACEs; why self-tests do not establish etiology.",
+  "content": "<h3>Screening vs. Full Diagnostic Evaluation</h3>\n<ul>\n<li><strong>Screening Tools (PC-PTSD-5, PCL-5, ITQ):</strong> Brief self-report instruments designed to identify whether potential post-traumatic symptoms are present. A high score indicates a need for comprehensive evaluation; it does NOT establish a clinical diagnosis.</li>\n<li><strong>Gold-Standard Clinical Assessment (CAPS-5):</strong> 45-to-60 minute structured clinical diagnostic interview administered by trained mental health professionals evaluating symptom frequency, intensity, and functional impairment.</li>\n<li><strong>Adverse Childhood Experience (ACE) Questionnaires:</strong> Population-level epidemiological risk surveillance measures. They are NOT diagnostic tools and do not predict an individual's personal mental health status.</li>\n</ul>"
+ },
+ {
+  "id": "res_15",
+  "num": "15",
+  "title": "Multiple Lenses Map",
+  "subtitle": "Panoramic Integration of the 8 Lenses",
+  "module": "Module 8",
+  "summary": "Panoramic synthesis map integrating the 8 lenses into a coherent, non-reductionist worldview.",
+  "content": "<h3>The 8 Lenses of Human Adaptation</h3>\n<p>BODY \u00b7 MEMORY \u00b7 DEVELOPMENT \u00b7 RELATIONSHIPS \u00b7 ENVIRONMENT \u00b7 CULTURE \u00b7 MEANING \u00b7 SYSTEMS</p>\n<p>Each lens examines a distinct dimension of the human story. When we examine how brain networks (Body), unmoored sensory fragments (Memory), attachment timing (Development), trust (Relationships), economic security (Environment), collective rituals (Culture), moral integrity (Meaning), and institutional policies (Systems) intersect, human suffering ceases to be a mystery. We see adaptation in its full context.</p>"
+ },
+ {
+  "id": "res_16",
+  "num": "16",
+  "title": "My Learning Map",
+  "subtitle": "Personal Reflection & Metacognitive Journal",
+  "module": "Module 8",
+  "summary": "Choice-based personal reflection journal tracking perspective shifts and ongoing inquiries.",
+  "content": "<h3>Personal Learning Synthesis Prompts</h3>\n<ul>\n<li>1. What foundational assumption about trauma or human behavior did I hold before this course that has fundamentally shifted?</li>\n<li>2. Which concept or scientific distinction felt most liberating or clarifying for me?</li>\n<li>3. How will I apply the Context Matrix in my workplace, family, or community interactions?</li>\n<li>4. What boundary will I maintain to avoid slipping into the 'accidental therapist' trap?</li>\n<li>5. Where can I replace a snap diagnostic judgment with genuine, compassionate curiosity?</li>\n<li>6. What question would I like to explore further as I continue learning?</li>\n</ul>"
+ }
+]

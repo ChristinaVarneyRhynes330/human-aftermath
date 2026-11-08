@@ -1,0 +1,142 @@
+[
+ {
+  "term": "Allostatic Load",
+  "category": "Physiology",
+  "def": "The cumulative physiological wear and tear on the body and brain resulting from chronic, unmanaged stress exposure."
+ },
+ {
+  "term": "Potentially Traumatic Event (PTE)",
+  "category": "Taxonomy",
+  "def": "An event involving actual or threatened death, serious physical injury, sexual violation, or overwhelming terror that has the capacity to exceed immediate coping resources."
+ },
+ {
+  "term": "Everyday Stress",
+  "category": "Taxonomy",
+  "def": "Predictable physiological and emotional tension arising from life demands, accompanied by natural autonomic activation and recovery."
+ },
+ {
+  "term": "Chronic Adversity",
+  "category": "Taxonomy",
+  "def": "Prolonged, unyielding hardships (poverty, discrimination, chronic illness) that strain reserves over time without a single discrete crisis."
+ },
+ {
+  "term": "Co-Regulation",
+  "category": "Development",
+  "def": "The process by which an attuned, regulated caregiver calms and organizes a dysregulated nervous system through physical proximity, voice, and presence."
+ },
+ {
+  "term": "Hypocortisolism",
+  "category": "Neuroendocrine",
+  "def": "A physiological state characterized by blunted baseline cortisol levels paired with hypersensitive feedback receptors, frequently observed in chronic PTSD."
+ },
+ {
+  "term": "Window of Tolerance",
+  "category": "Clinical Model",
+  "def": "The optimal physiological and emotional zone where an individual can experience strong feelings and challenges while maintaining cognitive clarity and presence."
+ },
+ {
+  "term": "Hyperarousal",
+  "category": "Autonomic",
+  "def": "A state of sympathetic nervous system overdrive characterized by racing thoughts, panic, hypervigilance, insomnia, and irritability."
+ },
+ {
+  "term": "Hypoarousal",
+  "category": "Autonomic",
+  "def": "A state of parasympathetic/dorsal vagal collapse characterized by emotional numbness, detachment, exhaustion, freeze, and dissociation."
+ },
+ {
+  "term": "Interoception",
+  "category": "Physiology",
+  "def": "The sensory system through which the brain perceives internal bodily signals, including heartbeat, respiration, muscle tension, and visceral comfort."
+ },
+ {
+  "term": "Reconstructive Memory",
+  "category": "Memory",
+  "def": "The principle that memories are dynamically assembled upon recall using core sensory fragments, emotion, and current context rather than played back like a video recording."
+ },
+ {
+  "term": "Sensory Shards",
+  "category": "Memory",
+  "def": "Fragmented, uncontextualized sensory memory traces (flashes, smells, sounds) encoded during extreme stress when hippocampal time-stamping is disrupted."
+ },
+ {
+  "term": "Depersonalization",
+  "category": "Dissociation",
+  "def": "An altered mental state involving persistent detachment from one's own physical body, emotions, or thoughts, as if observing oneself from outside."
+ },
+ {
+  "term": "Derealization",
+  "category": "Dissociation",
+  "def": "An altered mental state where the external environment feels dreamlike, foggy, two-dimensional, artificial, or muffled behind glass."
+ },
+ {
+  "term": "Structural Dissociation",
+  "category": "Clinical Model",
+  "def": "A therapeutic model conceptualizing divisions between apparently normal parts of personality and emotional parts that manage trauma memories."
+ },
+ {
+  "term": "Complex PTSD (C-PTSD)",
+  "category": "Diagnosis",
+  "def": "An ICD-11 diagnosis consisting of core PTSD symptoms plus Disturbances in Self-Organization (DSO): affect dysregulation, negative self-concept, and relational disturbances."
+ },
+ {
+  "term": "Disturbances in Self-Organization (DSO)",
+  "category": "Diagnosis",
+  "def": "The three defining non-fear symptom clusters of ICD-11 Complex PTSD: chronic affect dysregulation, persistent negative self-concept, and relational impairment."
+ },
+ {
+  "term": "Developmental Trauma Disorder (DTD)",
+  "category": "Clinical Model",
+  "def": "An influential proposed clinical framework capturing the cumulative impact of chronic childhood caregiver maltreatment; not yet codified in DSM-5-TR or ICD-11."
+ },
+ {
+  "term": "Equifinality",
+  "category": "Clinical Thinking",
+  "def": "The principle that identical observable behaviors or symptoms can arise from radically different underlying psychological, biological, or environmental causes."
+ },
+ {
+  "term": "Moral Injury",
+  "category": "Existential / Clinical",
+  "def": "Psychological and existential distress resulting from actions, or lack thereof, that transgress an individual's deeply held moral code, ethics, or trust in authority."
+ },
+ {
+  "term": "Institutional Betrayal",
+  "category": "Systemic",
+  "def": "Harm inflicted when an institution trusted to protect an individual causes harm, covers up abuse, or retaliates against reports of wrongdoing."
+ },
+ {
+  "term": "Continuous Traumatic Stress (CTS)",
+  "category": "Systemic",
+  "def": "A state occurring when violence, oppression, or poverty is actively ongoing in the external environment, making hypervigilance an accurate survival response."
+ },
+ {
+  "term": "Fawn Response",
+  "category": "Adaptation",
+  "def": "A trauma survival strategy where an individual seeks safety through appeasement, people-pleasing, and total suppression of personal boundaries."
+ },
+ {
+  "term": "Neuroplastic Window",
+  "category": "Treatment",
+  "def": "A temporary period of enhanced synaptic plasticity and dendritic spine growth (often triggered by BDNF or ketamine) where new psychological patterns can be formed."
+ },
+ {
+  "term": "Prolonged Exposure (PE)",
+  "category": "Treatment",
+  "def": "A first-line, guideline-supported cognitive-behavioral therapy involving gradual, safe therapeutic engagement with avoided memories and safe reminders."
+ },
+ {
+  "term": "Cognitive Processing Therapy (CPT)",
+  "category": "Treatment",
+  "def": "A first-line, guideline-supported cognitive therapy helping clients examine and modify unhelpful trauma-related beliefs ('stuck points') regarding safety, trust, and guilt."
+ },
+ {
+  "term": "EMDR",
+  "category": "Treatment",
+  "def": "Eye Movement Desensitization and Reprocessing; a structured first-line therapy using bilateral sensory stimulation while activating trauma memories."
+ },
+ {
+  "term": "Earned Security",
+  "category": "Development",
+  "def": "An adult attachment status achieved when an individual with an insecure childhood history develops stable, secure relational patterns through healing relationships."
+ }
+]

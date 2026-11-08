@@ -1,0 +1,217 @@
+[
+ {
+  "slug": "cw-removal-day",
+  "type": "scenario",
+  "title": "Removal day: explaining what is happening",
+  "audience": "professional",
+  "definition": {
+   "status": "DRAFT. Requires review by a child-welfare practitioner, a licensed clinician and legal counsel before any learner use.",
+   "purpose": "Practice protecting a child while keeping avoidable additional distress as low as possible.",
+   "instruction": "This is a fictional case. Choose what you would do at each step. There is rarely one perfect answer, so read the trade-offs in the feedback. You can pause or stop at any time.",
+   "accessibility_alternative": "Every choice is plain text with its own feedback. A text transcript of all paths is available from the results screen.",
+   "setting": "You are a child protective investigator. A supervisor has approved removal of Maya (7) and Eli (4) because of a substantiated, immediate safety threat in the home. A relative has agreed to take both children tonight. Their mother, Dana, is present and very upset.",
+   "dimensions": [
+    {
+     "id": "safety",
+     "label": "Immediate child safety",
+     "gate": true,
+     "threshold": 0,
+     "description": "Non-negotiable. Any step that leaves a child exposed to the identified threat fails the scenario."
+    },
+    {
+     "id": "communication",
+     "label": "Honest, age-appropriate communication",
+     "threshold": 1
+    },
+    {
+     "id": "family",
+     "label": "Family and sibling connection",
+     "threshold": 1
+    },
+    {
+     "id": "dignity",
+     "label": "Dignity and choice for the children and parent",
+     "threshold": 1
+    },
+    {
+     "id": "documentation",
+     "label": "Documentation and procedure",
+     "threshold": 0
+    }
+   ],
+   "start": "n1",
+   "nodes": {
+    "n1": {
+     "narrative": "You are in the living room. Maya is holding Eli's hand. Dana is crying and asking what is going to happen. The relative is waiting outside.",
+     "prompt": "How do you begin?",
+     "choices": [
+      {
+       "id": "n1c",
+       "text": "Tell the children they are going on a sleepover with their cousin, to keep them from being upset.",
+       "effects": {
+        "safety": 0,
+        "communication": -2,
+        "dignity": -1,
+        "family": 0
+       },
+       "feedback": "The wish to spare them distress is understandable, but a false explanation costs trust when the truth emerges, and children often sense something is wrong. You can be gentle and still truthful.",
+       "next": "n2"
+      },
+      {
+       "id": "n1a",
+       "text": "Kneel to the children's level and say, in plain words, that grown-ups have decided they need to stay somewhere safe tonight, that it is not their fault, and that you will answer their questions. Then tell Dana what is happening and what she can ask you.",
+       "effects": {
+        "safety": 1,
+        "communication": 2,
+        "dignity": 2,
+        "family": 1
+       },
+       "feedback": "Strong. It is honest, brief and age-appropriate, it tells the children it is not their fault, and it keeps Dana informed. The trade-off is time, so stay focused and calm.",
+       "next": "n2"
+      },
+      {
+       "id": "n1d",
+       "text": "Wait an hour so everyone can calm down before you act.",
+       "effects": {
+        "safety": -2,
+        "communication": 0,
+        "dignity": 0,
+        "family": 0
+       },
+       "feedback": "Calm matters, but this removal was approved because of an immediate safety threat. Delaying leaves the children exposed. Calming can happen while you carry out the plan.",
+       "next": "n2",
+       "critical": true
+      },
+      {
+       "id": "n1b",
+       "text": "Explain the legal basis for the removal to Dana in detail while the children listen, so she understands the process.",
+       "effects": {
+        "safety": 0,
+        "communication": -1,
+        "dignity": -1,
+        "family": 0,
+        "documentation": 1
+       },
+       "feedback": "Dana does deserve a clear explanation, and procedure matters. But detailed legal and allegation language in front of the children can frighten them and shames their mother. Consider giving Dana the detail privately.",
+       "next": "n2"
+      }
+     ]
+    },
+    "n2": {
+     "narrative": "Maya looks at you and asks, 'Is Mommy in trouble? Can Eli come with me?'",
+     "prompt": "What do you say?",
+     "choices": [
+      {
+       "id": "n2b",
+       "text": "'Don't worry, you will be back home tomorrow.'",
+       "effects": {
+        "safety": 0,
+        "communication": -2,
+        "dignity": -1,
+        "family": -1
+       },
+       "feedback": "A false promise is a kind of comfort that costs trust later. You cannot know this outcome.",
+       "next": "n3"
+      },
+      {
+       "id": "n2d",
+       "text": "Explain that the reason is because of what happened with Mommy and the allegations.",
+       "effects": {
+        "safety": 0,
+        "communication": -2,
+        "dignity": -2,
+        "family": -1
+       },
+       "feedback": "Sharing allegation detail with a young child can hurt them and their relationship with their parent. Details belong with the adults who need them.",
+       "next": "n3"
+      },
+      {
+       "id": "n2a",
+       "text": "'Grown-ups are working out how to keep everyone safe. Eli is coming with you tonight. I do not know everything about what happens next, but I will tell you what I find out.'",
+       "effects": {
+        "safety": 0,
+        "communication": 2,
+        "dignity": 1,
+        "family": 2
+       },
+       "feedback": "Strong, provided it is true. It answers only what you can verify, keeps the siblings together, and is honest about uncertainty. Only promise what you have confirmed.",
+       "next": "n3"
+      },
+      {
+       "id": "n2c",
+       "text": "'We can't talk about this now. Please get your things.'",
+       "effects": {
+        "safety": 0,
+        "communication": -1,
+        "dignity": -1,
+        "family": -1
+       },
+       "feedback": "Time pressure is real, but a flat deflection leaves a frightened child with no information and no sense of control. A short honest answer takes seconds.",
+       "next": "n3"
+      }
+     ]
+    },
+    "n3": {
+     "narrative": "You help the children get ready. Eli is looking for a worn blanket. Maya says she wants to hug her mother goodbye. You have no information suggesting a hug would put the children at risk, and Dana is calm enough to be present.",
+     "prompt": "What do you do?",
+     "choices": [
+      {
+       "id": "n3d",
+       "text": "Take the children out without telling Dana where they are going, to avoid a confrontation.",
+       "effects": {
+        "safety": 0,
+        "communication": -1,
+        "dignity": -2,
+        "family": -2,
+        "documentation": -1
+       },
+       "feedback": "Parents are generally entitled to timely information, within the law and agency policy. Silence can escalate conflict and damages the working relationship.",
+       "end": true
+      },
+      {
+       "id": "n3b",
+       "text": "Skip the goodbye and the blanket to leave quickly, and explain later.",
+       "effects": {
+        "safety": 0,
+        "communication": -1,
+        "dignity": -2,
+        "family": -2,
+        "documentation": 0
+       },
+       "feedback": "Speed can matter. But when there is no safety reason against it, skipping a goodbye and a comfort object adds avoidable distress. Judge each situation, not a blanket rule.",
+       "end": true
+      },
+      {
+       "id": "n3c",
+       "text": "Allow a long private goodbye with no supervision and no limits so the children feel secure.",
+       "effects": {
+        "safety": -2,
+        "communication": 0,
+        "dignity": 1,
+        "family": 1,
+        "documentation": -1
+       },
+       "feedback": "The impulse is caring, but unsupervised contact can undermine the safety plan. Contact should be arranged according to policy and any court order.",
+       "end": true,
+       "critical": true
+      },
+      {
+       "id": "n3a",
+       "text": "Let each child take a comfort item, allow a brief goodbye with Dana while you stay in the room, write down what the children asked and said, and tell Dana how and when she will hear about contact.",
+       "effects": {
+        "safety": 1,
+        "communication": 1,
+        "dignity": 2,
+        "family": 2,
+        "documentation": 2
+       },
+       "feedback": "Strong. It protects the children, honors the bond, and creates a record of their concerns. Supervised contact decisions should always follow your agency's policy and any court order.",
+       "end": true
+      }
+     ]
+    }
+   },
+   "debrief": "Notice how the choices that protected the children did not require harshness, and the choices that sounded kind were not always honest or safe. In practice you would also document the children's concerns and follow up on contact and sibling placement. Learners should check every step against current agency policy, state law and the specific court order."
+  }
+ }
+]

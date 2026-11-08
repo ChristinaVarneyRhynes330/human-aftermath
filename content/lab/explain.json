@@ -1,0 +1,53 @@
+[
+ {
+  "slug": "what-else-could-explain",
+  "type": "explain_options",
+  "title": "What else could explain this?",
+  "audience": "professional",
+  "definition": {
+   "purpose": "Practice generating several plausible explanations before settling on one.",
+   "instruction": "A parent has missed three scheduled visits with their child. Select every explanation that is plausible given only this information.",
+   "accessibility_alternative": "Options are a standard checkbox group.",
+   "prompt": "A parent has missed three scheduled visits with their child.",
+   "options": [
+    {
+     "id": "o1",
+     "text": "The visit location is hard to reach without a car.",
+     "plausible": true,
+     "why": "Transportation is a common barrier and easy to check."
+    },
+    {
+     "id": "o2",
+     "text": "The parent's work schedule conflicts with the visit times.",
+     "plausible": true,
+     "why": "Schedules set without the parent's input often clash with shift work."
+    },
+    {
+     "id": "o3",
+     "text": "The parent did not receive, or misunderstood, the notice.",
+     "plausible": true,
+     "why": "Phone numbers change and instructions are easy to misread under stress."
+    },
+    {
+     "id": "o4",
+     "text": "The parent is avoiding visits out of fear, shame or distress.",
+     "plausible": true,
+     "why": "Contact can be painful. Avoidance is possible, but it is still only a hypothesis."
+    },
+    {
+     "id": "o5",
+     "text": "The parent had a health problem or emergency.",
+     "plausible": true,
+     "why": "Worth asking before drawing conclusions."
+    },
+    {
+     "id": "o6",
+     "text": "The parent does not care about the child.",
+     "plausible": false,
+     "why": "This is a conclusion about motive that the information does not support. Many other explanations fit the same facts."
+    }
+   ],
+   "debrief": "You usually cannot know which explanation is true yet. The skill is to keep several open and ask. Concluding indifference too early can lead to worse decisions and a weaker working relationship."
+  }
+ }
+]

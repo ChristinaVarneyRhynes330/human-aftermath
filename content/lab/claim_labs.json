@@ -1,0 +1,206 @@
+[
+ {
+  "slug": "claim-01",
+  "type": "claim_lab",
+  "title": "Trauma rewires your brain permanently.",
+  "audience": "public",
+  "definition": {
+   "purpose": "Practice asking what research actually shows before accepting or rejecting a popular claim.",
+   "instruction": "Read the claim. Choose how you would respond, then compare with the evidence-based reasoning.",
+   "accessibility_alternative": "All content is plain text; no timing or drag interactions.",
+   "claim": "Trauma rewires your brain permanently.",
+   "evidence_status": "Established Knowledge",
+   "choices": [
+    {
+     "id": "literal",
+     "text": "Accept it literally",
+     "correct": false,
+     "feedback": "It treats neural adaptations as permanent, irreversible damage, ignoring lifelong neuroplasticity."
+    },
+    {
+     "id": "reject",
+     "text": "Reject the idea entirely",
+     "correct": false,
+     "feedback": "Brains are frozen like concrete after trauma and can never recover."
+    },
+    {
+     "id": "ask",
+     "text": "Ask what the research actually demonstrates",
+     "correct": true,
+     "feedback": "fMRI and structural MRI studies show functional networks can recalibrate when safe environments, supportive relationships, and evidence-based therapies are introduced."
+    }
+   ],
+   "responsible_version": "Trauma alters how brain networks communicate under threat, but lifelong neuroplasticity allows the nervous system to recalibrate toward safety."
+  }
+ },
+ {
+  "slug": "claim-02",
+  "type": "claim_lab",
+  "title": "Trauma is stored in the body's muscle tissue.",
+  "audience": "public",
+  "definition": {
+   "purpose": "Practice asking what research actually shows before accepting or rejecting a popular claim.",
+   "instruction": "Read the claim. Choose how you would respond, then compare with the evidence-based reasoning.",
+   "accessibility_alternative": "All content is plain text; no timing or drag interactions.",
+   "claim": "Trauma is stored in the body's muscle tissue.",
+   "evidence_status": "Metaphor / Clinical Model",
+   "choices": [
+    {
+     "id": "literal",
+     "text": "Accept it literally",
+     "correct": false,
+     "feedback": "Muscles do not possess neural synapses required to encode autobiographical event narratives."
+    },
+    {
+     "id": "reject",
+     "text": "Reject the idea entirely",
+     "correct": false,
+     "feedback": "Peripheral muscle tissue stores video-like memory files that must be physically massaged out."
+    },
+    {
+     "id": "ask",
+     "text": "Ask what the research actually demonstrates",
+     "correct": true,
+     "feedback": "Cognitive neuroscience confirms that episodic memories are stored across neocortical-hippocampal networks; the body stores conditioned motor reflexes and autonomic threat biases."
+    }
+   ],
+   "responsible_version": "Trauma deeply conditions autonomic responses and muscular tension habits, but autobiographical memory resides in neural networks."
+  }
+ },
+ {
+  "slug": "claim-03",
+  "type": "claim_lab",
+  "title": "Your amygdala is broken or stuck on permanently.",
+  "audience": "public",
+  "definition": {
+   "purpose": "Practice asking what research actually shows before accepting or rejecting a popular claim.",
+   "instruction": "Read the claim. Choose how you would respond, then compare with the evidence-based reasoning.",
+   "accessibility_alternative": "All content is plain text; no timing or drag interactions.",
+   "claim": "Your amygdala is broken or stuck on permanently.",
+   "evidence_status": "Established Knowledge",
+   "choices": [
+    {
+     "id": "literal",
+     "text": "Accept it literally",
+     "correct": false,
+     "feedback": "The amygdala is not broken\u2014it is performing its evolutionary threat-detection function with exquisite vigilance in a system that perceives ongoing danger."
+    },
+    {
+     "id": "reject",
+     "text": "Reject the idea entirely",
+     "correct": false,
+     "feedback": "Trauma physically destroys the amygdala like a burnt fuse."
+    },
+    {
+     "id": "ask",
+     "text": "Ask what the research actually demonstrates",
+     "correct": true,
+     "feedback": "Neuroimaging demonstrates that PTSD involves altered connectivity between the Salience Network and prefrontal executive control networks, not cell death in the amygdala."
+    }
+   ],
+   "responsible_version": "In post-traumatic stress, the threat-detection network fires with heightened sensitivity due to altered regulatory communication with the prefrontal cortex."
+  }
+ },
+ {
+  "slug": "claim-04",
+  "type": "claim_lab",
+  "title": "ACE scores predict your personal health destiny.",
+  "audience": "public",
+  "definition": {
+   "purpose": "Practice asking what research actually shows before accepting or rejecting a popular claim.",
+   "instruction": "Read the claim. Choose how you would respond, then compare with the evidence-based reasoning.",
+   "accessibility_alternative": "All content is plain text; no timing or drag interactions.",
+   "claim": "ACE scores predict your personal health destiny.",
+   "evidence_status": "Established Knowledge",
+   "choices": [
+    {
+     "id": "literal",
+     "text": "Accept it literally",
+     "correct": false,
+     "feedback": "It commits the ecological fallacy by applying a population probability directly to an individual's life, ignoring protective factors."
+    },
+    {
+     "id": "reject",
+     "text": "Reject the idea entirely",
+     "correct": false,
+     "feedback": "A high ACE score means your adult physical and psychological health is guaranteed to collapse."
+    },
+    {
+     "id": "ask",
+     "text": "Ask what the research actually demonstrates",
+     "correct": true,
+     "feedback": "Longitudinal developmental research shows that positive childhood experiences, subsequent supportive relationships, and economic stability heavily modify outcomes."
+    }
+   ],
+   "responsible_version": "Adverse Childhood Experiences increase statistical risk across populations, but individual outcomes are heavily buffered by protective factors and subsequent support."
+  }
+ },
+ {
+  "slug": "claim-05",
+  "type": "claim_lab",
+  "title": "Ketamine is a miracle cure that permanently resets the brain.",
+  "audience": "public",
+  "definition": {
+   "purpose": "Practice asking what research actually shows before accepting or rejecting a popular claim.",
+   "instruction": "Read the claim. Choose how you would respond, then compare with the evidence-based reasoning.",
+   "accessibility_alternative": "All content is plain text; no timing or drag interactions.",
+   "claim": "Ketamine is a miracle cure that permanently resets the brain.",
+   "evidence_status": "Emerging Evidence / Investigational",
+   "choices": [
+    {
+     "id": "literal",
+     "text": "Accept it literally",
+     "correct": false,
+     "feedback": "Without active psychotherapy and behavioral integration during the temporary neuroplastic window, symptoms frequently return within weeks."
+    },
+    {
+     "id": "reject",
+     "text": "Reject the idea entirely",
+     "correct": false,
+     "feedback": "A single ketamine infusion permanently deletes trauma and cures PTSD without any therapy."
+    },
+    {
+     "id": "ask",
+     "text": "Ask what the research actually demonstrates",
+     "correct": true,
+     "feedback": "Randomized clinical trials demonstrate rapid transient antidepressant and anti-PTSD effects, but durable recovery requires structured psychotherapeutic integration."
+    }
+   ],
+   "responsible_version": "Ketamine opens a temporary neuroplastic window through BDNF release, providing acute relief that requires psychotherapeutic integration for lasting recovery."
+  }
+ },
+ {
+  "slug": "claim-06",
+  "type": "claim_lab",
+  "title": "You must remember every detail of a trauma to heal.",
+  "audience": "public",
+  "definition": {
+   "purpose": "Practice asking what research actually shows before accepting or rejecting a popular claim.",
+   "instruction": "Read the claim. Choose how you would respond, then compare with the evidence-based reasoning.",
+   "accessibility_alternative": "All content is plain text; no timing or drag interactions.",
+   "claim": "You must remember every detail of a trauma to heal.",
+   "evidence_status": "Established Knowledge",
+   "choices": [
+    {
+     "id": "literal",
+     "text": "Accept it literally",
+     "correct": false,
+     "feedback": "Demanding complete historical recall ignores that severe stress disrupts hippocampal encoding, often creating permanent, harmless memory gaps."
+    },
+    {
+     "id": "reject",
+     "text": "Reject the idea entirely",
+     "correct": false,
+     "feedback": "Unrecovered memories will fester indefinitely until every forgotten second is excavated."
+    },
+    {
+     "id": "ask",
+     "text": "Ask what the research actually demonstrates",
+     "correct": true,
+     "feedback": "Clinical trials of CPT and PE demonstrate significant symptom reduction and functional recovery even in survivors with permanent memory gaps."
+    }
+   ],
+   "responsible_version": "Trauma recovery requires calming the threat system and updating meaning, not recovering every missing historical detail."
+  }
+ }
+]

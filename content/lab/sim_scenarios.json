@@ -1,0 +1,807 @@
+[
+ {
+  "slug": "sim-workplace-overwhelm",
+  "type": "scenario",
+  "title": "A performance review becomes overwhelming",
+  "audience": "public",
+  "definition": {
+   "instruction": "This is a fictional situation. Choose what you would do at each step. Most choices have trade-offs, so read the feedback. You can pause or stop at any time, and you do not need to use a personal experience.",
+   "accessibility_alternative": "All choices and feedback are plain text. No timing or drag interactions.",
+   "status": "DRAFT. Rewritten from the original single-step simulator. Needs review by a licensed clinician and an HR or education professional before learner use.",
+   "purpose": "Practice responding to a colleague's acute distress while keeping professional roles and expectations clear.",
+   "setting": "You are Alex's manager, in a closed-door review after a stressful reorganization. Alex says: \"Everyone is setting me up to fail. The targets changed three times this week, and I honestly can't breathe in this room right now.\"",
+   "dimensions": [
+    {
+     "id": "respect",
+     "label": "Respect and privacy",
+     "threshold": 1
+    },
+    {
+     "id": "curiosity",
+     "label": "Curiosity instead of assumptions",
+     "threshold": 1
+    },
+    {
+     "id": "choice",
+     "label": "Offering choices",
+     "threshold": 1
+    },
+    {
+     "id": "accountability",
+     "label": "Clear expectations",
+     "threshold": 0
+    }
+   ],
+   "start": "n1",
+   "nodes": {
+    "n1": {
+     "narrative": "Alex is pacing, breathing fast, and has stopped making eye contact.",
+     "prompt": "What do you say first?",
+     "choices": [
+      {
+       "id": "n1c",
+       "text": "\"Tell me what's really going on. Is this about the reorg or is there something deeper?\"",
+       "effects": {
+        "respect": -2,
+        "choice": -1,
+        "curiosity": -1,
+        "accountability": 0
+       },
+       "feedback": "Curiosity is good, but probing for deeper causes in a performance meeting crosses a role boundary. Alex did not offer personal history, and you are not their therapist.",
+       "next": "n2"
+      },
+      {
+       "id": "n1a",
+       "text": "\"Let's pause the review. Would you like a few minutes outside, or should we pick this up tomorrow morning?\"",
+       "effects": {
+        "respect": 1,
+        "choice": 2,
+        "curiosity": 0,
+        "accountability": 0
+       },
+       "feedback": "Strong. It lowers demands right away and gives a real choice. The review is postponed, not cancelled, so expectations stay intact.",
+       "next": "n2"
+      },
+      {
+       "id": "n1d",
+       "text": "\"If you leave this room, I will have to note it as insubordination.\"",
+       "effects": {
+        "respect": -2,
+        "choice": -2,
+        "curiosity": 0,
+        "accountability": 1
+       },
+       "feedback": "Clear consequences have a place, but a threat in a moment of acute distress escalates things. It also stops people from telling you when something is wrong.",
+       "next": "n2"
+      },
+      {
+       "id": "n1b",
+       "text": "\"I can see you're upset. We only have ten minutes left, so let's finish the key points and then you can take a break.\"",
+       "effects": {
+        "respect": 0,
+        "choice": -1,
+        "curiosity": 0,
+        "accountability": 1
+       },
+       "feedback": "Time and fairness matter, and finishing can feel efficient. But pressing on while someone says they cannot breathe takes away control and rarely produces a useful review.",
+       "next": "n2"
+      }
+     ]
+    },
+    "n2": {
+     "narrative": "After a short break, Alex returns calmer. The target changes are real, and Alex also missed a deadline last week.",
+     "prompt": "How do you resume?",
+     "choices": [
+      {
+       "id": "n2b",
+       "text": "\"Let's drop the deadline for now. You've been through enough this week.\"",
+       "effects": {
+        "respect": 1,
+        "choice": 0,
+        "curiosity": 0,
+        "accountability": -2
+       },
+       "feedback": "Kindly meant, but dropping an expectation without agreement leaves Alex and the team in the dark, and it can quietly signal that you think Alex cannot cope.",
+       "next": "n3"
+      },
+      {
+       "id": "n2d",
+       "text": "\"I've talked to leadership, and I promise the targets won't change again.\"",
+       "effects": {
+        "respect": 0,
+        "choice": 0,
+        "curiosity": 0,
+        "accountability": -2
+       },
+       "feedback": "A promise you cannot guarantee damages trust when it breaks. Offer what you can actually control.",
+       "next": "n3"
+      },
+      {
+       "id": "n2a",
+       "text": "\"Thanks for coming back. I'd like to talk about the target changes and also the missed deadline. Which would you like to start with?\"",
+       "effects": {
+        "respect": 1,
+        "choice": 1,
+        "curiosity": 1,
+        "accountability": 2
+       },
+       "feedback": "Strong. You acknowledge the real pressure, keep the deadline on the table, and share the order of the conversation.",
+       "next": "n3"
+      },
+      {
+       "id": "n2c",
+       "text": "\"I'm sure all this is hitting you hard because of what you've been through before.\"",
+       "effects": {
+        "respect": -2,
+        "choice": 0,
+        "curiosity": -2,
+        "accountability": 0
+       },
+       "feedback": "This is an assumption about Alex's history. Alex never mentioned it, and your guess can feel invasive.",
+       "next": "n3"
+      }
+     ]
+    },
+    "n3": {
+     "narrative": "Alex asks, \"Can you keep this between us? I don't want the team to know I lost it.\"",
+     "prompt": "How do you answer?",
+     "choices": [
+      {
+       "id": "n3d",
+       "text": "\"You should really see a therapist about this.\"",
+       "effects": {
+        "respect": -1,
+        "choice": -1,
+        "curiosity": -1,
+        "accountability": 0
+       },
+       "feedback": "Supportive resources help when offered as an option. A directive diagnosis-like push can feel like a judgment.",
+       "end": true
+      },
+      {
+       "id": "n3b",
+       "text": "\"Absolutely, I will never tell anyone anything.\"",
+       "effects": {
+        "respect": 0,
+        "choice": 0,
+        "curiosity": 0,
+        "accountability": -1
+       },
+       "feedback": "Comforting, but absolute promises can collide with real obligations (for example, a safety concern or HR policy). Be honest about limits.",
+       "end": true
+      },
+      {
+       "id": "n3c",
+       "text": "\"I may need to tell HR everything so it's documented.\"",
+       "effects": {
+        "respect": -1,
+        "choice": -1,
+        "curiosity": 0,
+        "accountability": 1
+       },
+       "feedback": "Documentation can be appropriate, but 'everything' goes beyond what is needed and can make Alex stop confiding in you.",
+       "end": true
+      },
+      {
+       "id": "n3a",
+       "text": "\"I'll keep this conversation private and only share what I must, like a need for scheduling support, with your agreement. If there are HR support options, I can point you to them. Would that help?\"",
+       "effects": {
+        "respect": 2,
+        "choice": 2,
+        "curiosity": 0,
+        "accountability": 0
+       },
+       "feedback": "Strong. It is honest about limits, protects privacy, and offers support without pushing it.",
+       "end": true
+      }
+     ]
+    }
+   },
+   "debrief": "The strongest path paused, kept the expectation, and protected privacy without promising more than you could deliver. Compassion and clear expectations worked together."
+  }
+ },
+ {
+  "slug": "sim-public-distress",
+  "type": "scenario",
+  "title": "A friend becomes frightened in a crowded place",
+  "audience": "public",
+  "definition": {
+   "instruction": "This is a fictional situation. Choose what you would do at each step. Most choices have trade-offs, so read the feedback. You can pause or stop at any time, and you do not need to use a personal experience.",
+   "accessibility_alternative": "All choices and feedback are plain text. No timing or drag interactions.",
+   "status": "DRAFT. Rewritten from the original single-step simulator. Needs review by a licensed clinician and an HR or education professional before learner use.",
+   "purpose": "Practice staying present and offering choices when someone is suddenly frightened, without interrogating them or dismissing them.",
+   "setting": "You are having dinner with your friend Jordan in a loud, crowded restaurant. Jordan grips the table, stares at the door, and says, \"We need to leave right now. Something horrible is going to happen.\"",
+   "dimensions": [
+    {
+     "id": "respect",
+     "label": "Taking their fear seriously",
+     "threshold": 1
+    },
+    {
+     "id": "choice",
+     "label": "Offering choices",
+     "threshold": 1
+    },
+    {
+     "id": "curiosity",
+     "label": "Not interrogating or diagnosing",
+     "threshold": 1
+    },
+    {
+     "id": "presence",
+     "label": "Staying present and steady",
+     "threshold": 1
+    }
+   ],
+   "start": "n1",
+   "nodes": {
+    "n1": {
+     "narrative": "You see nothing unusual near the door.",
+     "prompt": "What do you say?",
+     "choices": [
+      {
+       "id": "n1b",
+       "text": "\"Look, there's nobody there. It's just a delivery driver. You're fine.\"",
+       "effects": {
+        "respect": -1,
+        "choice": -1,
+        "curiosity": 0,
+        "presence": 0
+       },
+       "feedback": "The facts may be accurate, but correcting what Jordan sees in the moment can feel dismissive and rarely calms the fear.",
+       "next": "n2"
+      },
+      {
+       "id": "n1d",
+       "text": "\"Okay, we're leaving now.\" You stand up quickly and take Jordan's arm.",
+       "effects": {
+        "respect": 1,
+        "choice": -2,
+        "curiosity": 0,
+        "presence": 0
+       },
+       "feedback": "Taking the fear seriously is right, but moving fast and touching without asking can feel like loss of control. Ask before you touch.",
+       "next": "n2"
+      },
+      {
+       "id": "n1a",
+       "text": "In a calm, low voice: \"I'm right here with you. Would you like to step outside together?\"",
+       "effects": {
+        "respect": 2,
+        "choice": 2,
+        "curiosity": 0,
+        "presence": 2
+       },
+       "feedback": "Strong. You do not argue about what is there, you stay with Jordan, and you offer a simple choice.",
+       "next": "n2"
+      },
+      {
+       "id": "n1c",
+       "text": "\"Who do you see? Did something happen to you somewhere like this?\"",
+       "effects": {
+        "respect": -1,
+        "choice": -1,
+        "curiosity": -2,
+        "presence": -1
+       },
+       "feedback": "Questions about the cause can pull Jordan further into the experience. This is not the moment for questions.",
+       "next": "n2"
+      }
+     ]
+    },
+    "n2": {
+     "narrative": "Outside on the patio, Jordan's breathing slows a little. Jordan says, \"I'm sorry. I don't know what that was.\"",
+     "prompt": "What do you say?",
+     "choices": [
+      {
+       "id": "n2d",
+       "text": "\"Let's not worry about it. Do you want me to call someone for you?\"",
+       "effects": {
+        "respect": 1,
+        "choice": 1,
+        "curiosity": 0,
+        "presence": 1
+       },
+       "feedback": "Offering help is good. Naming a specific person, or asking first what kind of help Jordan wants, is better.",
+       "next": "n3"
+      },
+      {
+       "id": "n2b",
+       "text": "\"That was a panic attack. You should get checked for PTSD.\"",
+       "effects": {
+        "respect": -1,
+        "choice": -1,
+        "curiosity": -2,
+        "presence": 0
+       },
+       "feedback": "You cannot know what happened or give a diagnosis. Suggesting professional support can help, but labeling does not.",
+       "next": "n3"
+      },
+      {
+       "id": "n2c",
+       "text": "\"It's okay, it was nothing. Let's just go back in and forget it.\"",
+       "effects": {
+        "respect": -1,
+        "choice": -1,
+        "curiosity": 0,
+        "presence": 0
+       },
+       "feedback": "Wanting to normalize it is kind, but minimizing and rushing back may ignore what Jordan needs.",
+       "next": "n3"
+      },
+      {
+       "id": "n2a",
+       "text": "\"You don't need to apologize or explain. Would you like to sit here a bit, go home, or head back in?\"",
+       "effects": {
+        "respect": 2,
+        "choice": 2,
+        "curiosity": 1,
+        "presence": 1
+       },
+       "feedback": "Strong. It removes the pressure to explain and keeps the choices with Jordan.",
+       "next": "n3"
+      }
+     ]
+    },
+    "n3": {
+     "narrative": "A few days later you are thinking about how to check in.",
+     "prompt": "What do you do?",
+     "choices": [
+      {
+       "id": "n3c",
+       "text": "Say nothing, worried that raising it will make it worse.",
+       "effects": {
+        "respect": 0,
+        "choice": 0,
+        "curiosity": 0,
+        "presence": -1
+       },
+       "feedback": "Giving space is okay, but complete silence can read as avoidance. A light, low-pressure check-in usually helps.",
+       "end": true
+      },
+      {
+       "id": "n3a",
+       "text": "Send a brief message: \"Thinking of you. No need to reply. If you ever want company or want to talk, I'm around.\"",
+       "effects": {
+        "respect": 2,
+        "choice": 2,
+        "curiosity": 1,
+        "presence": 1
+       },
+       "feedback": "Strong. Warm, low-pressure, and open-ended.",
+       "end": true
+      },
+      {
+       "id": "n3d",
+       "text": "Tell mutual friends what happened so they can look out for Jordan.",
+       "effects": {
+        "respect": -2,
+        "choice": -1,
+        "curiosity": 0,
+        "presence": 0
+       },
+       "feedback": "This shares something private without permission. Ask Jordan first about who they want to know.",
+       "end": true
+      },
+      {
+       "id": "n3b",
+       "text": "Ask repeatedly, \"Did you figure out what happened? Have you seen anyone?\"",
+       "effects": {
+        "respect": -1,
+        "choice": -1,
+        "curiosity": -2,
+        "presence": 0
+       },
+       "feedback": "Repeated questioning can feel like pressure. Let Jordan lead on what, if anything, to share.",
+       "end": true
+      }
+     ]
+    }
+   },
+   "debrief": "You did not need to know what Jordan was experiencing to respond well. Staying present, offering choices, and protecting privacy were enough."
+  }
+ },
+ {
+  "slug": "sim-explanation-vs-excuse",
+  "type": "scenario",
+  "title": "An explanation is offered as an excuse",
+  "audience": "public",
+  "definition": {
+   "instruction": "This is a fictional situation. Choose what you would do at each step. Most choices have trade-offs, so read the feedback. You can pause or stop at any time, and you do not need to use a personal experience.",
+   "accessibility_alternative": "All choices and feedback are plain text. No timing or drag interactions.",
+   "status": "DRAFT. Rewritten from the original single-step simulator. Needs review by a licensed clinician and an HR or education professional before learner use.",
+   "purpose": "Practice holding compassion and accountability together without either excusing harm or dismissing someone's history.",
+   "setting": "You lead a project retrospective. Your colleague Marcus missed a client deadline and, in a meeting, raised his voice at a junior colleague, Sara. When you raise it, Marcus says: \"You know I have PTSD from my deployment. My nervous system was triggered, so you need to accommodate that.\"",
+   "dimensions": [
+    {
+     "id": "respect",
+     "label": "Respect for Marcus and his history",
+     "threshold": 1
+    },
+    {
+     "id": "accountability",
+     "label": "Accountability for impact",
+     "threshold": 1
+    },
+    {
+     "id": "team",
+     "label": "Care for Sara and the team",
+     "threshold": 0,
+     "gate": true
+    },
+    {
+     "id": "support",
+     "label": "Offering real support",
+     "threshold": 1
+    }
+   ],
+   "start": "n1",
+   "nodes": {
+    "n1": {
+     "narrative": "The room is quiet. Sara is looking at the table.",
+     "prompt": "How do you respond?",
+     "choices": [
+      {
+       "id": "n1d",
+       "text": "\"Are you actually diagnosed? Can you prove it?\"",
+       "effects": {
+        "respect": -2,
+        "accountability": 0,
+        "team": 0,
+        "support": -1
+       },
+       "feedback": "You are not the right person to verify a medical condition. If an accommodation is requested, the process runs through HR.",
+       "next": "n2"
+      },
+      {
+       "id": "n1b",
+       "text": "\"You're right, I'm sorry I brought it up. Let's drop it.\"",
+       "effects": {
+        "respect": 1,
+        "accountability": -2,
+        "team": -2,
+        "support": 0
+       },
+       "feedback": "The goal is kind, but it leaves the harm to Sara and the missed deadline unaddressed, and it tells the team that this is how consequences are avoided.",
+       "next": "n2"
+      },
+      {
+       "id": "n1c",
+       "text": "\"I don't care about your background. We have a business to run.\"",
+       "effects": {
+        "respect": -2,
+        "accountability": 1,
+        "team": 0,
+        "support": -1
+       },
+       "feedback": "The expectation is fair, but dismissing what Marcus shared may make him stop telling you when he is struggling.",
+       "next": "n2"
+      },
+      {
+       "id": "n1a",
+       "text": "\"Thank you for telling me, Marcus. I take that seriously. The missed deadline and how Sara was spoken to still affected the team, so I'd like us to talk about both.\"",
+       "effects": {
+        "respect": 2,
+        "accountability": 2,
+        "team": 1,
+        "support": 1
+       },
+       "feedback": "Strong. You acknowledge his history without letting it erase the impact on others.",
+       "next": "n2"
+      }
+     ]
+    },
+    "n2": {
+     "narrative": "Marcus replies, \"So you're saying I'm making it up?\"",
+     "prompt": "What do you say?",
+     "choices": [
+      {
+       "id": "n2c",
+       "text": "\"Let's step away from that and just focus on the deadline.\"",
+       "effects": {
+        "respect": 0,
+        "accountability": 1,
+        "team": -1,
+        "support": 0
+       },
+       "feedback": "Focusing on the deadline is fair, but skipping the conduct toward Sara leaves a real harm unresolved.",
+       "next": "n3"
+      },
+      {
+       "id": "n2a",
+       "text": "\"No. I'm saying your experience is real and so is the effect on Sara. Both can be true.\"",
+       "effects": {
+        "respect": 2,
+        "accountability": 2,
+        "team": 1,
+        "support": 0
+       },
+       "feedback": "Strong. It names the false either-or and holds both.",
+       "next": "n3"
+      },
+      {
+       "id": "n2d",
+       "text": "\"I never said that. Let's end this conversation.\"",
+       "effects": {
+        "respect": -1,
+        "accountability": -1,
+        "team": -1,
+        "support": -1
+       },
+       "feedback": "Ending the conversation leaves everything unresolved. Staying curious can calm the moment.",
+       "next": "n3"
+      },
+      {
+       "id": "n2b",
+       "text": "\"Well, other people with trauma manage to behave better.\"",
+       "effects": {
+        "respect": -2,
+        "accountability": 1,
+        "team": 0,
+        "support": -1
+       },
+       "feedback": "Comparing people with trauma is both inaccurate and hurtful. People respond very differently.",
+       "next": "n3"
+      }
+     ]
+    },
+    "n3": {
+     "narrative": "Marcus calms down. You need to agree on next steps.",
+     "prompt": "What do you propose?",
+     "choices": [
+      {
+       "id": "n3b",
+       "text": "Marcus gets an informal pass this time. No one needs to talk to Sara.",
+       "effects": {
+        "respect": 1,
+        "accountability": -2,
+        "team": -2,
+        "support": 0
+       },
+       "feedback": "It avoids discomfort, but the team still sees no repair, and Marcus gets no help preventing a repeat.",
+       "end": true
+      },
+      {
+       "id": "n3d",
+       "text": "Share with the team that Marcus has PTSD so they will understand.",
+       "effects": {
+        "respect": -2,
+        "accountability": 0,
+        "team": -1,
+        "support": -1
+       },
+       "feedback": "This discloses private health information without permission, which can cause serious harm and may violate policy.",
+       "end": true
+      },
+      {
+       "id": "n3a",
+       "text": "Marcus will speak with Sara directly to acknowledge the impact. You'll plan for realistic deadlines together, and you'll tell him about HR support options if he wants accommodations or other help.",
+       "effects": {
+        "respect": 1,
+        "accountability": 2,
+        "team": 2,
+        "support": 2
+       },
+       "feedback": "Strong. It repairs the harm, addresses the deadline, and offers support without forcing it.",
+       "end": true
+      },
+      {
+       "id": "n3c",
+       "text": "Send Marcus a formal written warning and tell him to manage his reactions.",
+       "effects": {
+        "respect": -1,
+        "accountability": 1,
+        "team": 0,
+        "support": -2
+       },
+       "feedback": "Documentation may be appropriate, but jumping straight to it without discussing support can escalate and does nothing to prevent recurrence.",
+       "end": true
+      }
+     ]
+    }
+   },
+   "debrief": "Understanding why someone reacts is different from excusing the impact. The strongest path held both, and protected Marcus's privacy and Sara's dignity."
+  }
+ },
+ {
+  "slug": "sim-classroom-shutdown",
+  "type": "scenario",
+  "title": "A student withdraws during a group lab",
+  "audience": "public",
+  "definition": {
+   "instruction": "This is a fictional situation. Choose what you would do at each step. Most choices have trade-offs, so read the feedback. You can pause or stop at any time, and you do not need to use a personal experience.",
+   "accessibility_alternative": "All choices and feedback are plain text. No timing or drag interactions.",
+   "status": "DRAFT. Rewritten from the original single-step simulator. Needs review by a licensed clinician and an HR or education professional before learner use.",
+   "purpose": "Practice responding to a withdrawn student without public pressure, guessing at causes, or overstepping your role.",
+   "setting": "You teach high school biology. During a group lab, Taylor, 16, has put their head down, hasn't taken out a notebook, and mumbles, \"Leave me alone. I don't care about this class.\"",
+   "dimensions": [
+    {
+     "id": "respect",
+     "label": "Dignity and privacy",
+     "threshold": 1
+    },
+    {
+     "id": "curiosity",
+     "label": "Curiosity instead of assumptions",
+     "threshold": 1
+    },
+    {
+     "id": "choice",
+     "label": "Offering choices",
+     "threshold": 1
+    },
+    {
+     "id": "role",
+     "label": "Staying within your role",
+     "threshold": 1
+    }
+   ],
+   "start": "n1",
+   "nodes": {
+    "n1": {
+     "narrative": "Other students are watching.",
+     "prompt": "What do you do?",
+     "choices": [
+      {
+       "id": "n1c",
+       "text": "\"Taylor, are things bad at home? You look really traumatized.\"",
+       "effects": {
+        "respect": -2,
+        "curiosity": -2,
+        "choice": -1,
+        "role": -2
+       },
+       "feedback": "This is a public guess about someone's private life and a diagnosis-like label. Teachers should not speculate.",
+       "next": "n2"
+      },
+      {
+       "id": "n1a",
+       "text": "Quietly crouch beside Taylor: \"No pressure right now. You can work solo at the side bench, or take ten minutes to reset. Which works better?\"",
+       "effects": {
+        "respect": 2,
+        "curiosity": 1,
+        "choice": 2,
+        "role": 1
+       },
+       "feedback": "Strong. It is private, low-demand, and offers a real choice.",
+       "next": "n2"
+      },
+      {
+       "id": "n1d",
+       "text": "Ignore Taylor for now and keep teaching to avoid a scene.",
+       "effects": {
+        "respect": 0,
+        "curiosity": -1,
+        "choice": 0,
+        "role": 0
+       },
+       "feedback": "Giving space can be right, but ignoring with no check-in at all can leave a struggling student unnoticed.",
+       "next": "n2"
+      },
+      {
+       "id": "n1b",
+       "text": "\"Taylor, sit up and join your group, or you'll be sent to the office.\"",
+       "effects": {
+        "respect": -2,
+        "curiosity": -1,
+        "choice": -2,
+        "role": 0
+       },
+       "feedback": "Expectations matter, but a public ultimatum can embarrass a student and escalate things.",
+       "next": "n2"
+      }
+     ]
+    },
+    "n2": {
+     "narrative": "Taylor chooses the side bench and works quietly. At the end of class, you say a quiet word at the door. Taylor says, \"I'm fine.\"",
+     "prompt": "What do you say?",
+     "choices": [
+      {
+       "id": "n2b",
+       "text": "\"You're clearly not fine. Tell me what's going on right now.\"",
+       "effects": {
+        "respect": -1,
+        "curiosity": -1,
+        "choice": -2,
+        "role": -1
+       },
+       "feedback": "Your concern is real, but pressing a student who has said no teaches them not to come to you.",
+       "next": "n3"
+      },
+      {
+       "id": "n2d",
+       "text": "\"If you tell me, I promise I won't tell anyone.\"",
+       "effects": {
+        "respect": -1,
+        "curiosity": 0,
+        "choice": 0,
+        "role": -2
+       },
+       "feedback": "Teachers usually cannot promise absolute secrecy because of safety and reporting duties. Be honest about limits.",
+       "next": "n3"
+      },
+      {
+       "id": "n2a",
+       "text": "\"Okay. If you ever want to talk or need anything, you can come find me. I'll check in again later this week.\"",
+       "effects": {
+        "respect": 2,
+        "curiosity": 1,
+        "choice": 2,
+        "role": 1
+       },
+       "feedback": "Strong. You accept the answer, keep the door open, and don't pressure.",
+       "next": "n3"
+      },
+      {
+       "id": "n2c",
+       "text": "\"Good. Just make sure you finish the lab write-up.\"",
+       "effects": {
+        "respect": 0,
+        "curiosity": -1,
+        "choice": 0,
+        "role": 1
+       },
+       "feedback": "Keeping expectations is fine, but this misses a chance to leave a door open.",
+       "next": "n3"
+      }
+     ]
+    },
+    "n3": {
+     "narrative": "Over the next week Taylor has missed two classes and seems more withdrawn.",
+     "prompt": "What is your next step?",
+     "choices": [
+      {
+       "id": "n3d",
+       "text": "Wait and see. Students go through phases.",
+       "effects": {
+        "respect": 0,
+        "curiosity": -1,
+        "choice": 0,
+        "role": -1
+       },
+       "feedback": "Patience is often right, but a pattern like missed classes is worth a gentle step, not just waiting.",
+       "end": true
+      },
+      {
+       "id": "n3b",
+       "text": "Contact the counselor right away without telling Taylor.",
+       "effects": {
+        "respect": -1,
+        "curiosity": 0,
+        "choice": -1,
+        "role": 1
+       },
+       "feedback": "Involving the counselor is appropriate, but doing it behind Taylor's back can damage trust. Being open about it usually works better, unless there is a safety concern.",
+       "end": true
+      },
+      {
+       "id": "n3c",
+       "text": "Conclude Taylor is probably being abused and call a family member to ask about home.",
+       "effects": {
+        "respect": -2,
+        "curiosity": -2,
+        "choice": -1,
+        "role": -2
+       },
+       "feedback": "You do not have evidence of abuse, and an uninformed call could cause harm. Follow your school's procedure for concerns, and use trained staff.",
+       "end": true
+      },
+      {
+       "id": "n3a",
+       "text": "Talk to Taylor privately, describe what you've noticed without guessing at causes, explain that you may involve the school counselor, and ask how Taylor would like to be supported.",
+       "effects": {
+        "respect": 2,
+        "curiosity": 2,
+        "choice": 1,
+        "role": 2
+       },
+       "feedback": "Strong. You describe what you observed, stay within your role, and involve the right support openly.",
+       "end": true
+      }
+     ]
+    }
+   },
+   "debrief": "You never needed to know why Taylor was withdrawn. Noticing, keeping things private, offering choices, and bringing in the right support was enough."
+  }
+ }
+]

@@ -1,0 +1,62 @@
+[
+ {
+  "id": "claim_01",
+  "claim": "Trauma rewires your brain permanently.",
+  "myth": "Brains are frozen like concrete after trauma and can never recover.",
+  "right": "Extreme stress alters functional connectivity and threat calibration across distributed neural networks.",
+  "overreach": "It treats neural adaptations as permanent, irreversible damage, ignoring lifelong neuroplasticity.",
+  "evidence": "fMRI and structural MRI studies show functional networks can recalibrate when safe environments, supportive relationships, and evidence-based therapies are introduced.",
+  "rewrite": "Trauma alters how brain networks communicate under threat, but lifelong neuroplasticity allows the nervous system to recalibrate toward safety.",
+  "tier": "Established Knowledge"
+ },
+ {
+  "id": "claim_02",
+  "claim": "Trauma is stored in the body's muscle tissue.",
+  "myth": "Peripheral muscle tissue stores video-like memory files that must be physically massaged out.",
+  "right": "Psychological trauma deeply affects autonomic tone, neuromuscular posture, and visceral comfort.",
+  "overreach": "Muscles do not possess neural synapses required to encode autobiographical event narratives.",
+  "evidence": "Cognitive neuroscience confirms that episodic memories are stored across neocortical-hippocampal networks; the body stores conditioned motor reflexes and autonomic threat biases.",
+  "rewrite": "Trauma deeply conditions autonomic responses and muscular tension habits, but autobiographical memory resides in neural networks.",
+  "tier": "Metaphor / Clinical Model"
+ },
+ {
+  "id": "claim_03",
+  "claim": "Your amygdala is broken or stuck on permanently.",
+  "myth": "Trauma physically destroys the amygdala like a burnt fuse.",
+  "right": "The amygdala shows heightened threat sensitivity and faster activation during trauma reminders.",
+  "overreach": "The amygdala is not broken\u2014it is performing its evolutionary threat-detection function with exquisite vigilance in a system that perceives ongoing danger.",
+  "evidence": "Neuroimaging demonstrates that PTSD involves altered connectivity between the Salience Network and prefrontal executive control networks, not cell death in the amygdala.",
+  "rewrite": "In post-traumatic stress, the threat-detection network fires with heightened sensitivity due to altered regulatory communication with the prefrontal cortex.",
+  "tier": "Established Knowledge"
+ },
+ {
+  "id": "claim_04",
+  "claim": "ACE scores predict your personal health destiny.",
+  "myth": "A high ACE score means your adult physical and psychological health is guaranteed to collapse.",
+  "right": "Cumulative childhood adversity correlates with higher population-level rates of chronic illness and depression.",
+  "overreach": "It commits the ecological fallacy by applying a population probability directly to an individual's life, ignoring protective factors.",
+  "evidence": "Longitudinal developmental research shows that positive childhood experiences, subsequent supportive relationships, and economic stability heavily modify outcomes.",
+  "rewrite": "Adverse Childhood Experiences increase statistical risk across populations, but individual outcomes are heavily buffered by protective factors and subsequent support.",
+  "tier": "Established Knowledge"
+ },
+ {
+  "id": "claim_05",
+  "claim": "Ketamine is a miracle cure that permanently resets the brain.",
+  "myth": "A single ketamine infusion permanently deletes trauma and cures PTSD without any therapy.",
+  "right": "Ketamine blocks NMDA receptors, triggering a rapid glutamate surge and BDNF release that reduces acute symptoms within hours.",
+  "overreach": "Without active psychotherapy and behavioral integration during the temporary neuroplastic window, symptoms frequently return within weeks.",
+  "evidence": "Randomized clinical trials demonstrate rapid transient antidepressant and anti-PTSD effects, but durable recovery requires structured psychotherapeutic integration.",
+  "rewrite": "Ketamine opens a temporary neuroplastic window through BDNF release, providing acute relief that requires psychotherapeutic integration for lasting recovery.",
+  "tier": "Emerging Evidence / Investigational"
+ },
+ {
+  "id": "claim_06",
+  "claim": "You must remember every detail of a trauma to heal.",
+  "myth": "Unrecovered memories will fester indefinitely until every forgotten second is excavated.",
+  "right": "Processing the emotional meaning and threat charge of memories is a proven therapeutic mechanism.",
+  "overreach": "Demanding complete historical recall ignores that severe stress disrupts hippocampal encoding, often creating permanent, harmless memory gaps.",
+  "evidence": "Clinical trials of CPT and PE demonstrate significant symptom reduction and functional recovery even in survivors with permanent memory gaps.",
+  "rewrite": "Trauma recovery requires calming the threat system and updating meaning, not recovering every missing historical detail.",
+  "tier": "Established Knowledge"
+ }
+]
