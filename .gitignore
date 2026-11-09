@@ -4,3 +4,6 @@ node_modules
 !.env.example
 next-env.d.ts
 *.tsbuildinfo
+
+# Build-created podcast, reconstructed from tracked verified segments
+public/How_Trauma_Recalibrates_Your_Nervous_System_web.mp3
