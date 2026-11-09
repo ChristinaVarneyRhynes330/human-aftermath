@@ -1,31 +1,40 @@
-import type { Metadata, Viewport } from 'next'
-import { Inter, Fraunces } from 'next/font/google'
-import Link from 'next/link'
-import './globals.css'
+import type { Metadata, Viewport } from 'next';
+import GlobalHeader from '@/components/GlobalHeader';
+import './globals.css';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-fraunces' })
+export const metadata: Metadata = {
+  title: 'The Human Aftermath™ | Complete Interactive Online Course',
+  description: 'A trauma-literacy course for people and for the professionals who support them.',
+};
 
-export const metadata: Metadata = { title: 'The Human Aftermath™', description: 'A trauma-literacy course for people and for the professionals who support them.' }
-export const viewport: Viewport = { width: 'device-width', initialScale: 1 }
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
-      <body className="min-h-screen">
-        <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:m-2 focus:rounded focus:bg-white focus:p-2">Skip to content</a>
-        <header className="border-b border-slate/30 bg-white">
-          <nav className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-2 px-4 py-3" aria-label="Main">
-            <Link href="/" className="font-semibold text-ink-blue">The Human Aftermath™</Link>
-            <div className="flex gap-4 text-sm">
-              <Link href="/dashboard" className="underline-offset-4 hover:underline">My course</Link>
-              <Link href="/lab" className="underline-offset-4 hover:underline">Learning Lab</Link>
-              <Link href="/certificate" className="underline-offset-4 hover:underline">Certificate</Link>
-            </div>
-          </nav>
-        </header>
-        <main id="main" className="mx-auto max-w-5xl px-4 py-8">{children}</main>
+    <html lang="en" className="dark">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        />
+      </head>
+      <body className="min-h-screen bg-[#080C10] text-[#E2E8F0] antialiased selection:bg-[#617B8A]/30 selection:text-[#172126] flex flex-col">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-3 focus:rounded-xl focus:bg-[#16202A] focus:p-3 focus:text-[#EDAE9D] focus:border focus:border-[#EDAE9D]"
+        >
+          Skip to main content
+        </a>
+
+        <GlobalHeader />
+
+        <div id="main-content" className="flex-1 w-full flex flex-col">
+          {children}
+        </div>
       </body>
     </html>
-  )
+  );
 }

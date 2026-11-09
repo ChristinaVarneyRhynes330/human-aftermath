@@ -1,8 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  --color-ink: #172126;
+  --color-ink-blue: #3E6892;
+  --color-ink-soft: #94A3B8;
+  --color-steel: #3E6892;
+  --color-sage: #617B8A;
+  --color-mint: #BBD4C5;
+  --color-bone: #FAF6F7;
+  --color-peach: #EDAE9D;
+  --color-blush: #EACBD4;
+  --color-peach-glow: rgba(237, 174, 157, 0.25);
+  --color-bg-deep: #080C10;
+  --color-bg-surface: #10161E;
+  --color-bg-elevated: #16202A;
+
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-editorial: 'Cormorant Garamond', Georgia, serif;
+  --font-brand: 'Cinzel', serif;
+}
 
 :root {
   --bg-deep: #080C10;
@@ -17,7 +34,7 @@
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-sans);
   background-color: var(--bg-deep);
   color: #E2E8F0;
   background-image: 
@@ -30,11 +47,11 @@ body {
 }
 
 .font-serif-editorial {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: var(--font-editorial);
 }
 
 .font-brand-title {
-  font-family: 'Cinzel', serif;
+  font-family: var(--font-brand);
   letter-spacing: 0.12em;
 }
 
@@ -59,6 +76,23 @@ body {
   transform: translateY(-2px);
   border-color: var(--border-hover);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(237, 174, 157, 0.15);
+}
+
+/* Unify light-mode legacy card classes with dark luxury theme */
+.bg-white {
+  background-color: rgba(18, 26, 36, 0.85) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #FAF6F7 !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.border-slate\/30 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.divide-slate\/20 > :not([hidden]) ~ :not([hidden]) {
+  border-color: rgba(255, 255, 255, 0.08) !important;
 }
 
 /* Luxury Button System */
