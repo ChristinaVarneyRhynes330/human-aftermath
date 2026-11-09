@@ -9,7 +9,8 @@ export async function GET() {
     join(process.cwd(), 'src', 'masterclass-parts', `part-${String(i).padStart(2, '0')}.txt`)
   );
   const chunks = await Promise.all(files.map((file) => readFile(file, 'utf8')));
-  return new Response(chunks.join(''), {
+  const html = chunks.join('').replace('src="How_Trauma_Recalibrates_Your_Nervous_System.m4a"', 'src="/How_Trauma_Recalibrates_Your_Nervous_System_web.mp3"');
+  return new Response(html, {
     headers: {
       'Content-Type': 'text/html; charset=utf-8',
       'Cache-Control': 'public, max-age=3600',

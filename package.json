@@ -9,7 +9,10 @@
     "typecheck": "tsc --noEmit",
     "seed": "node --env-file=.env.local scripts/seed.mjs",
     "validate:lab": "tsx scripts/validate-lab.ts",
-    "audit:media": "node scripts/audit-media.mjs"
+    "audit:media": "node scripts/audit-media.mjs",
+    "predev": "node scripts/assemble-audio.mjs",
+    "prebuild": "node scripts/assemble-audio.mjs",
+    "verify:audio": "node scripts/assemble-audio.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.6.1",
