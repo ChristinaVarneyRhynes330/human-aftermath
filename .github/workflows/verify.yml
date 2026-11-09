@@ -23,6 +23,8 @@ jobs:
         run: node scripts/verify-masterclass.mjs
       - name: Validate Lab Scenarios Graph
         run: npm run validate:lab
+      - name: Assemble and verify podcast audio
+        run: npm run verify:audio
       - name: Audit media references and missing assets
         run: npm run audit:media
 
