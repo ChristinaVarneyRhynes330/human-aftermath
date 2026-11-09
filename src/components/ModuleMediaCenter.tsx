@@ -111,7 +111,7 @@ export default function ModuleMediaCenter({
             onClick={() => setShowTranscript(!showTranscript)}
             className="px-3 py-1.5 bg-[#16202A] hover:bg-[#1E2B38] border border-white/10 rounded-xl text-[#EDAE9D] font-semibold transition text-[11px]"
           >
-            {showTranscript ? 'Hide Transcript' : 'Transcript & Chapters'}
+            {showTranscript ? 'Hide Summary' : 'Summary & Chapters'}
           </button>
         </div>
       </div>
@@ -148,7 +148,7 @@ export default function ModuleMediaCenter({
       {showTranscript && (
         <div className="p-4 rounded-xl bg-[#080C10]/90 border border-white/10 text-xs space-y-3">
           <div className="flex items-center justify-between font-bold text-[#EDAE9D]">
-            <span>Verified Synthesis Transcript: {media.title}</span>
+            <span>Module Summary & Chapter Guide: {media.title}</span>
             <span className="text-[10px] text-stone-400 font-mono">
               {media.master_duration} • Multidisciplinary Overview
             </span>
@@ -158,7 +158,7 @@ export default function ModuleMediaCenter({
             <div className="pt-2 border-t border-white/10 space-y-1.5 text-stone-300">
               {media.chapters.map((ch, idx) => (
                 <p key={idx}>
-                  <strong className="text-[#BBD4C5] font-mono">[{ch[0]}] {ch[2]}:</strong> Core multidisciplinary synthesis covered in this segment.
+                  <strong className="text-[#BBD4C5] font-mono">[{ch[0]}] {ch[2]}:</strong> Chapter topic. This is a summary, not a verbatim transcript.
                 </p>
               ))}
             </div>
