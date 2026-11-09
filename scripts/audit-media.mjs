@@ -44,12 +44,14 @@ const html = fs.existsSync(htmlParts)
   : read('public/masterclass.html');
 
 const localAssets = [
-  'How_Trauma_Recalibrates_Your_Nervous_System.m4a',
   'The_Human_Aftermath.pdf',
   'The_Human_Aftermath_Course_eBook.pdf',
   'The_Human_Aftermath_Infographic_Atlas.pdf',
   'The_Explainer Master Course Trailer.mp4',
 ];
+const podcast = 'How_Trauma_Recalibrates_Your_Nervous_System_web.mp3';
+if (!fs.existsSync(title('public/' + podcast))) errors.push('Build-ready podcast MP3 missing');
+else if (fs.statSync(title('public/' + podcast)).size !== 28316140) errors.push('Podcast MP3 byte length mismatch');
 for (const file of localAssets) {
   if (!html.includes(file)) warnings.push('Reference HTML does not mention expected asset: ' + file);
   if (!fs.existsSync(title('public/' + file))) warnings.push('Missing local asset: public/' + file);
