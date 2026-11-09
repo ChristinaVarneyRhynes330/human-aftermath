@@ -5,7 +5,7 @@
 ## Inventory
 - Course content: 8 modules, **65** lessons and 65 lesson-level quiz definitions in `content/curriculum.json`.
 - Video registry: **19 Vimeo IDs**: 8 module masterclasses, 8 default recaps + 1 additional Module 6 recap, 1 Module 7 bonus cut, 1 home-page trailer.
-- Audio podcast: **not deployed**. `/masterclass.html` uses `How_Trauma_Recalibrates_Your_Nervous_System.m4a` as its source, but no file with that name exists in the repo or supplied ZIP. The in-page "Select Audio" control selects a local file for the individual viewer only; it is not a remotely deployed asset or user-upload service.
+- Audio podcast: **restored to the GitHub source (Nov. 9 addendum)**. The verified 39:19.6 recording is now available as a 28.3 MB web MP3, reassembled automatically from 19 tracked segments before dev/build. The `/masterclass.html` response points to the generated static MP3. Audio assembly/checksum and CI build passed; actual playback on the deployment still needs browser QA. See `docs/AUDIO_ASSET.md`.
 - Download resources: `The_Human_Aftermath.pdf`, `The_Human_Aftermath_Course_eBook.pdf`, and `The_Human_Aftermath_Infographic_Atlas.pdf` are linked but absent from the project. The standalone MP4 trailer fallback is absent too; the trailer has a Vimeo iframe.
 - The 15-slide image display is embedded in the HTML; absence of PDF downloads does not mean the slides are absent.
 - Original course HTML is reconstructed byte-for-byte from 19 source segments at `/masterclass.html` and GitHub verifies the assembled integrity.
@@ -48,7 +48,7 @@
 - [ ] Vimeo privacy hashes and allowed embed domains are configured correctly
 - [ ] Captions and full transcripts exist for required videos
 - [ ] Keyboard, screen-reader, mobile and reduced-motion checks completed
-- [ ] 39:20 audio podcast is attached as a real hosted `.m4a` or `.mp3`
+- [x] 39:20 podcast restored to application build as verified MP3 (live browser playback remains unverified)
 - [ ] The three missing PDF downloads exist and are clickable
 
 ## Engineering readiness
@@ -60,7 +60,7 @@
 | Curriculum | Implemented as source content | 8 modules / 65 lessons present in JSON; instructional accuracy and end-to-end learner QA not independently certified |
 | Quizzes and labs | Implemented, needs scenario QA | Scenario validator checks graphs, not every instructional or user-experience outcome; earlier QA identified a scenario with zero passing routes |
 | Videos | Integrated in code, **unverified live** | 19 ID references; no proof of user playback; possible unlisted hash/domain restrictions |
-| Audio | **Blocked** | Podcast `.m4a` missing from repository and ZIP |
+| Audio | **Implemented; live QA required** | Verified MP3 assembled and served as static build asset; source M4A archived separately |
 | Downloads | **Blocked** | Three referenced PDF files absent |
 | Transcripts | Incomplete | Module media center originally labeled chapter summaries as "Verified Synthesis Transcript"; this branch clarifies it is a summary, not a transcript |
 | Account/progress | Partly implemented | Supabase auth and progress are present, but `completeLesson` reports `ok: true` even when storage fails; live persistence unverified |
@@ -71,7 +71,7 @@
 
 ## Priority order
 
-1. **P0 playback integrity:** Obtain the 39:20 audio asset and direct exact Vimeo iframe embed codes (including privacy hashes when present); audit in the real hosting domain. Add a genuine missing-media state instead of silently showing a non-playing podcast.
+1. **P0 playback integrity:** Confirm the 39:20 podcast loads and seeks on the real deployed domain; obtain exact Vimeo iframe embed codes (including privacy hashes when present) and verify every video in a browser.
 2. **P0 course integrity:** Make certificates conditional on verified learner completion, reconcile issuance/verification schema, and ensure server-side writes return truthful success/failure.
 3. **P1 deliverables:** Upload/rebuild the three named PDF files, expose accessible transcripts/captions, and ensure video chapters work or are clearly labeled as chapter guides.
 4. **P1 learner QA:** Test mobile and desktop, signed-in/out flows, persistence, all 65 lesson links, 19 video selectors, lab outcomes, and fallback routes.
