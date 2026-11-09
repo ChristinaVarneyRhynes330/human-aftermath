@@ -39,7 +39,7 @@ export default async function Dashboard() {
     }));
   }
 
-  const total = modules.reduce((s, m) => s + (m.lessons?.length || 0), 0);
+  const total = (modules ?? []).reduce((s, m) => s + (m.lessons?.length || 0), 0);
   const pct = total ? Math.round((doneSet.size / total) * 100) : 0;
 
   return (
@@ -52,7 +52,7 @@ export default async function Dashboard() {
           Your Course Curriculum & Video Directory
         </h1>
         <p className="mt-2 text-sm text-stone-300 font-light max-w-2xl">
-          8 multidisciplinary modules, 61 lessons, 8 Masterclass lectures, and 9 End-of-Module Video Recaps.
+          8 multidisciplinary modules, 65 lessons, 8 Masterclass lectures, and 9 End-of-Module Video Recaps.
         </p>
       </div>
 
@@ -81,7 +81,7 @@ export default async function Dashboard() {
 
       {/* Module List */}
       <div className="space-y-6">
-        {modules.map((m) => {
+        {(modules ?? []).map((m) => {
           const media = mediaRegistry[String(m.num)];
           return (
             <section
