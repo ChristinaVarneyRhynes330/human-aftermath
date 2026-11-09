@@ -23,6 +23,9 @@ jobs:
         run: node scripts/verify-masterclass.mjs
       - name: Validate Lab Scenarios Graph
         run: npm run validate:lab
+      - name: Audit media references and missing assets
+        run: npm run audit:media
+
       - name: Next.js Build & Typecheck
         run: npm run build
         env:
