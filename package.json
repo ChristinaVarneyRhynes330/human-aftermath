@@ -12,7 +12,8 @@
     "audit:media": "node scripts/audit-media.mjs",
     "predev": "node scripts/assemble-audio.mjs",
     "prebuild": "node scripts/assemble-audio.mjs",
-    "verify:audio": "node scripts/assemble-audio.mjs"
+    "verify:audio": "node scripts/assemble-audio.mjs",
+    "verify:phase1": "node scripts/verify-phase1.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.6.1",
