@@ -29,7 +29,7 @@
    - \`WAITLIST_ENABLED=false\` while preparing
    - \`PUBLIC_CONTACT_EMAIL\` = dedicated business contact that receives privacy/deletion requests
 3. Verify the \`launch_waitlist\` migration exists in the target Supabase project, RLS is enabled, and \`anon\` / \`authenticated\` have no table privileges. Check that only the backend service client can insert.
-4. Configure bot/spam protection (recommended Cloudflare Turnstile or hosting-layer rate limiting) before sustained public traffic. Current source uses input validation and a honeypot, but **not** enterprise-grade anti-spam or rate limiting.
+4. Configure Cloudflare Turnstile (required in the current signup endpoint) and allow the verified launch domain in its settings. The browser renders the widget and the server validates the response with the secret key. Consider additional hosting-layer rate limiting for sustained public traffic; the current endpoint also uses validation and a honeypot but does not independently rate-limit by IP.
 5. Configure newsletter/email sending (e.g. dedicated email platform with verified sender and unsubscribe links). The repository does **not** yet contain an automated email campaign or double opt-in. Do not promise an automated confirmation email until one is delivered and tested.
 6. Test with a disposable email on a real deployment: valid signup, invalid email, missing consent, duplicate signup, failure response, mobile keyboard, screen readers, privacy link, insert verification via Supabase.
 7. Confirm \`/masterclass.html\`, \`/How_Trauma_Recalibrates_Your_Nervous_System_web.mp3\`, \`/login\`, \`/courses/1/m1_l1\`, \`/lab\` all redirect away while \`COURSE_ACCESS_OPEN=false\`.
