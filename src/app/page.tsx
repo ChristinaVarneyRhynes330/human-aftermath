@@ -2,6 +2,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import WaitlistForm from '@/components/WaitlistForm';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'The Human Aftermath™ | Understand More. Assume Less.',
   description: 'A new multidisciplinary learning experience about trauma, adaptation, connection and human understanding. Explore a free starter guide and join the early-access list.',
@@ -162,7 +164,7 @@ export default function PhaseOneHome() {
           <div className="border border-white/15 bg-[#1A2D2D] p-7 sm:p-9 shadow-2xl rounded-[2px]">
             <p className="text-xs uppercase tracking-[0.18em] text-[#EDAE9D] font-bold">Early access</p>
             <h3 className="font-serif-editorial text-4xl mt-3 mb-5">Join the invitation list.</h3>
-            <WaitlistForm/>
+            <WaitlistForm enabled={process.env.WAITLIST_ENABLED === 'true' && !!process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && !!process.env.TURNSTILE_SECRET_KEY && !!process.env.PUBLIC_CONTACT_EMAIL}/>
           </div>
         </div>
       </section>
