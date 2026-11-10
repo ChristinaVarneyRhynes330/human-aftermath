@@ -28,6 +28,9 @@ jobs:
       - name: Audit media references and missing assets
         run: npm run audit:media
 
+      - name: Verify Phase 1 public release safeguards
+        run: npm run verify:phase1
+
       - name: Next.js Build & Typecheck
         run: npm run build
         env:
