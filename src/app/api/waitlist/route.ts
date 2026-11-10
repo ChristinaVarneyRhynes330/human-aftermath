@@ -49,6 +49,28 @@ export async function POST(request: NextRequest) {
     return reply('Please confirm that you want to receive course updates.', 400);
   }
 
+  // Spam protection is mandatory for the public waitlist. Both the browser's
+  // widget and this server verification must be configured before signups open.
+  const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
+  const turnstileToken = typeof data.turnstileToken === 'string' ? data.turnstileToken : '';
+  if (!turnstileSecret) return reply('The list is still being prepared. Please try again later.', 503);
+  if (!turnstileToken || turnstileToken.length > 2048) {
+    return reply('Please complete the human verification before signing up.', 400);
+  }
+  try {
+    const verification = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      body: new URLSearchParams({ secret: turnstileSecret, response: turnstileToken }),
+      cache: 'no-store',
+    });
+    const verdict = await verification.json() as { success?: boolean };
+    if (!verification.ok || !verdict.success) {
+      return reply('Human verification was unsuccessful. Please try again.', 400);
+    }
+  } catch {
+    return reply('Security verification is temporarily unavailable. Please try again.', 503);
+  }
+
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !key) {
