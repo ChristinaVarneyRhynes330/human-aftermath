@@ -31,7 +31,8 @@ for (let n = 1; n <= 8; n++) {
   }
 }
 const home = read('src/app/page.tsx');
-const trailer = /player\.vimeo\.com\/video\/(\d{8,12})/.exec(home);
+const fullCoursePreview = read('src/app/course-preview/page.tsx');
+const trailer = /player\.vimeo\.com\/video\/(\d{8,12})/.exec(fullCoursePreview);
 if (trailer) ids.push(trailer[1]);
 else errors.push('Homepage trailer Vimeo ID not found');
 const duplicate = [...new Set(ids.filter((id, idx) => ids.indexOf(id) !== idx))];
@@ -56,7 +57,7 @@ for (const file of localAssets) {
   if (!html.includes(file)) warnings.push('Reference HTML does not mention expected asset: ' + file);
   if (!fs.existsSync(title('public/' + file))) warnings.push('Missing local asset: public/' + file);
 }
-const allSources = [home, html, read('src/components/ModuleMediaCenter.tsx')].join('\n');
+const allSources = [home, fullCoursePreview, html, read('src/components/ModuleMediaCenter.tsx')].join('\n');
 if (!allSources.includes('player.vimeo.com')) errors.push('No embedded Vimeo player references found');
 
 console.log('The Human Aftermath — source-level media audit');
