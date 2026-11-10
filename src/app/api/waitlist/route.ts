@@ -14,7 +14,7 @@ function reply(message: string, status = 200, ok = status === 200) {
 }
 
 export async function POST(request: NextRequest) {
-  if (process.env.WAITLIST_ENABLED !== 'true') {
+  if (process.env.WAITLIST_ENABLED !== 'true' || !process.env.PUBLIC_CONTACT_EMAIL || !process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY) {
     return reply('Early access is not accepting signups yet. Please try again later.', 503);
   }
   const origin = request.headers.get('origin');
