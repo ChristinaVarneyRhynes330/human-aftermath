@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const EVIDENCE_TIERS = [
   {
@@ -43,6 +44,32 @@ const EVIDENCE_TIERS = [
 
 export default function GlobalHeader() {
   const [openModal, setOpenModal] = useState<'evidence' | 'library' | null>(null);
+  const pathname = usePathname();
+  const publicLanding = pathname === '/' || pathname === '/starter-kit' || pathname === '/privacy';
+  if (publicLanding) {
+    return (
+      <header className="phase1-header sticky top-0 z-40 border-b border-[#BBD4C5]/15 bg-[#0C1719]/95 backdrop-blur-xl text-[#F8F2EA]">
+        <div className="max-w-7xl mx-auto px-5 sm:px-7 h-20 flex items-center justify-between gap-5">
+          <Link href="/" className="flex items-center gap-3 shrink-0 group">
+            <span aria-hidden="true" className="relative h-9 w-9 rounded-full border border-[#EDAE9D]/60 flex items-center justify-center">
+              <span className="h-5 w-5 rounded-full bg-[#BBD4C5]/60 absolute translate-x-1" />
+              <span className="h-5 w-5 rounded-full bg-[#EDAE9D]/60 absolute -translate-x-1" />
+            </span>
+            <span className="flex flex-col">
+              <span className="font-brand-title text-[11px] sm:text-sm tracking-[0.1em] text-[#F8F2EA] font-bold">THE HUMAN AFTERMATH<span className="align-super text-[8px]">™</span></span>
+              <span className="text-[9px] uppercase tracking-[0.22em] text-[#BBD4C5] mt-1">Understand more · Assume less</span>
+            </span>
+          </Link>
+          <nav aria-label="Public site navigation" className="hidden md:flex items-center gap-6 text-xs font-semibold tracking-wide">
+            <Link href="/#preview" className="hover:text-[#EDAE9D] transition">The course</Link>
+            <Link href="/starter-kit" className="hover:text-[#EDAE9D] transition">Free starter guide</Link>
+            <Link href="/#join" className="hover:text-[#EDAE9D] transition">Early access</Link>
+          </nav>
+          <Link href="/#join" className="rounded-full border border-[#EDAE9D]/65 px-4 sm:px-5 py-2.5 text-xs font-semibold text-[#EDAE9D] hover:bg-[#EDAE9D] hover:text-[#0C1719] transition shrink-0">Join the list <span aria-hidden="true">↗</span></Link>
+        </div>
+      </header>
+    );
+  }
 
   return (
     <>
