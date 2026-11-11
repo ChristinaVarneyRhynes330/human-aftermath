@@ -69,7 +69,7 @@ export default function WaitlistForm({ enabled = false }: { enabled?: boolean })
       <label className="flex gap-3 text-xs text-stone-200 leading-6 cursor-pointer">
         <input type="checkbox" required checked={consent} onChange={e => setConsent(e.target.checked)}
           className="mt-1 size-4 accent-[#EDAE9D] shrink-0" />
-        <span>I agree to receive launch updates and free educational resources from The Human Aftermath™ by email. I can unsubscribe anytime. See the <Link className="underline text-[#EDAE9D]" href="/privacy">privacy notice</Link>.</span>
+        <span>I agree to receive launch updates and free educational resources from Humanity Studies: The Wound Concealed by email. I can unsubscribe anytime. See the <Link className="underline text-[#EDAE9D]" href="/privacy">privacy notice</Link>.</span>
       </label>
       <div className="cf-turnstile" data-sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY} data-theme="dark" aria-label="Human verification"></div>
       <button type="submit" disabled={!consent || state === 'sending'} className="btn-luxury-primary w-full rounded-xl px-5 py-3.5 text-sm disabled:opacity-50 disabled:cursor-not-allowed">
