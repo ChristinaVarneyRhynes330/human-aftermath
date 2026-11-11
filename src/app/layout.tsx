@@ -3,8 +3,8 @@ import GlobalHeader from '@/components/GlobalHeader';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'The Human Aftermath™ | Complete Interactive Online Course',
-  description: 'A trauma-literacy course for people and for the professionals who support them.',
+  title: 'Humanity Studies: The Wound Concealed | Trauma Literacy. Transforming Humanity.',
+  description: 'An interdisciplinary course about concealed psychological pain, the science of trauma, and the journey from trauma literacy to human literacy.',
 };
 
 export const viewport: Viewport = {
