@@ -34,21 +34,21 @@ export default function WaitlistForm({ enabled = false }: { enabled?: boolean })
   }
 
   if (!enabled) {
-    return <div className="rounded-2xl border border-[#BBD4C5]/35 bg-white/5 p-6" role="status">
+    return <div className="rounded-2xl border border-[#C9C1B5]/35 bg-white/5 p-6" role="status">
       <p className="font-serif-editorial text-3xl text-[#F8F2EA]">The invitation list opens soon.</p>
       <p className="mt-3 text-sm text-[#CDD9D2] leading-7">We're preparing the signup service and privacy safeguards. The free learning guide is already available; no email is required to read it.</p>
-      <Link href="/starter-kit" className="inline-flex mt-5 text-sm font-semibold text-[#EDAE9D] underline underline-offset-4">Read the free starter guide →</Link>
+      <Link href="/starter-kit" className="inline-flex mt-5 text-sm font-semibold text-[#A86E5D] underline underline-offset-4">Read the free starter guide →</Link>
     </div>;
   }
 
   if (state === 'success') {
     return (
-      <div className="rounded-2xl border border-[#BBD4C5]/40 bg-[#BBD4C5]/10 p-6" role="status" aria-live="polite">
-        <span className="text-[#BBD4C5] text-3xl" aria-hidden="true">✓</span>
+      <div className="rounded-2xl border border-[#C9C1B5]/40 bg-[#C9C1B5]/10 p-6" role="status" aria-live="polite">
+        <span className="text-[#C9C1B5] text-3xl" aria-hidden="true">✓</span>
         <h3 className="font-serif-editorial text-3xl text-white mt-2">Your interest is noted.</h3>
         <p className="text-stone-200 text-sm mt-2 leading-7">{message}</p>
         <p className="text-stone-400 text-xs mt-2">Your email has been received; email ownership has not yet been verified.</p>
-        <Link href="/starter-kit" className="inline-flex mt-5 text-[#EDAE9D] underline underline-offset-4 font-semibold text-sm">Explore the free starter guide →</Link>
+        <Link href="/starter-kit" className="inline-flex mt-5 text-[#A86E5D] underline underline-offset-4 font-semibold text-sm">Explore the free starter guide →</Link>
       </div>
     );
   }
@@ -61,15 +61,15 @@ export default function WaitlistForm({ enabled = false }: { enabled?: boolean })
       </div>
       <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" strategy="afterInteractive" />
       <div>
-        <label htmlFor="early-email" className="block text-[11px] uppercase tracking-[0.16em] text-[#BBD4C5] font-semibold mb-2">Email address</label>
+        <label htmlFor="early-email" className="block text-[11px] uppercase tracking-[0.16em] text-[#C9C1B5] font-semibold mb-2">Email address</label>
         <input id="early-email" type="email" autoComplete="email" required maxLength={254}
           value={email} onChange={e => setEmail(e.target.value)} placeholder="you@example.com"
-          className="block w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3.5 text-white placeholder:text-stone-500 outline-none focus:border-[#EDAE9D] focus:ring-2 focus:ring-[#EDAE9D]/30" />
+          className="block w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3.5 text-white placeholder:text-stone-500 outline-none focus:border-[#A86E5D] focus:ring-2 focus:ring-[#A86E5D]/30" />
       </div>
       <label className="flex gap-3 text-xs text-stone-200 leading-6 cursor-pointer">
         <input type="checkbox" required checked={consent} onChange={e => setConsent(e.target.checked)}
-          className="mt-1 size-4 accent-[#EDAE9D] shrink-0" />
-        <span>I agree to receive launch updates and free educational resources from The Human Aftermath™ by email. I can unsubscribe anytime. See the <Link className="underline text-[#EDAE9D]" href="/privacy">privacy notice</Link>.</span>
+          className="mt-1 size-4 accent-[#A86E5D] shrink-0" />
+        <span>I agree to receive launch updates and free educational resources from Humanity Studies: The Wound Concealed by email. I can unsubscribe anytime. See the <Link className="underline text-[#A86E5D]" href="/privacy">privacy notice</Link>.</span>
       </label>
       <div className="cf-turnstile" data-sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY} data-theme="dark" aria-label="Human verification"></div>
       <button type="submit" disabled={!consent || state === 'sending'} className="btn-luxury-primary w-full rounded-xl px-5 py-3.5 text-sm disabled:opacity-50 disabled:cursor-not-allowed">

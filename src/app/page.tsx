@@ -1,180 +1,260 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import WaitlistForm from '@/components/WaitlistForm';
+import InnerExperienceArt from '@/components/InnerExperienceArt';
 
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: 'The Human Aftermath™ | Understand More. Assume Less.',
-  description: 'A new multidisciplinary learning experience about trauma, adaptation, connection and human understanding. Explore a free starter guide and join the early-access list.',
+  title: 'Humanity Studies: The Wound Concealed | Trauma Literacy. Transforming Humanity.',
+  description: 'A forthcoming interdisciplinary course exploring invisible psychological wounds, trauma literacy and the responsibility to understand human behavior with evidence, context and care. Explore the free guide.',
   openGraph: {
-    title: 'The Human Aftermath™ — Understand More. Assume Less.',
-    description: 'A more curious, evidence-aware way to understand human experience. Free introduction available now; foundational course in development.',
+    title: 'Humanity Studies: The Wound Concealed',
+    description: 'Trauma Literacy. Transforming Humanity. Explore the free Human Literacy Starter Guide and join the course invitation list.',
     type: 'website',
   },
 };
 
 const modules = [
-  ['01', 'Understanding trauma', 'Stress, adversity, experience and response'],
-  ['02', 'Brain, body & stress systems', 'Survival adaptations and neurobiology'],
-  ['03', 'Memory & dissociation', 'How context shapes remembering'],
-  ['04', 'Across the lifespan', 'Development, relationships and change'],
-  ['05', 'Clinical language & complexity', 'Diagnosis, resilience and uncertainty'],
-  ['06', 'Coping & adaptation', 'Function, accountability and safer choices'],
-  ['07', 'Healing & evidence', 'Research, treatment and the evidence compass'],
-  ['08', 'From trauma literacy to human literacy', 'Curiosity, agency, boundaries and humanity'],
+  { number: '01', title: 'What are we actually talking about?', desc: 'Trauma, everyday stress, adversity and the difference between an event and its outcome.' },
+  { number: '02', title: 'Survival in the brain and body', desc: 'Stress physiology, threat processing and the adaptive nervous system.' },
+  { number: '03', title: 'Memory, dissociation and meaning', desc: 'How memory works—and why it is not a perfect recording.' },
+  { number: '04', title: 'Trauma across a lifetime', desc: 'Development, attachment, relationships and context across age.' },
+  { number: '05', title: 'Diagnosis without reduction', desc: 'PTSD, complex trauma, differential explanations and clinical limits.' },
+  { number: '06', title: 'Coping, adaptation and responsibility', desc: 'The purpose and possible consequences of survival strategies.' },
+  { number: '07', title: 'Recovery and the evidence', desc: 'Treatment research, clinical models and claims that exceed the evidence.' },
+  { number: '08', title: 'From trauma literacy to human literacy', desc: 'Agency, boundaries, multiple perspectives and humane accountability.' },
 ];
 
-const values = [
-  { number: '01', title: 'Look beyond the label', body: 'An observation tells us what we noticed. It rarely tells us the whole reason why it happened.' },
-  { number: '02', title: 'Understand without assuming', body: 'Biology, relationships, culture, development and environment are all part of the picture.' },
-  { number: '03', title: 'Pair compassion with accountability', body: 'Understanding a person is not the same as excusing harm. Safety and dignity matter together.' },
+const principles = [
+  {
+    index: '01',
+    label: 'OBSERVE',
+    title: 'Separate what happened from what we assume.',
+    description: 'Behavior is observable. Its origin is not always visible—and similar responses can have different explanations.',
+  },
+  {
+    index: '02',
+    label: 'EXAMINE',
+    title: 'Bring the missing context into view.',
+    description: 'Biology, experience, development, relationships, culture and environment shape the human picture.',
+  },
+  {
+    index: '03',
+    label: 'DISCERN',
+    title: 'Let evidence set the limits of certainty.',
+    description: 'Differentiate established knowledge from hypotheses, interpretations, metaphors and unsupported claims.',
+  },
+  {
+    index: '04',
+    label: 'RESPOND',
+    title: 'Hold compassion and accountability together.',
+    description: 'Understanding human complexity does not erase safety, boundaries or responsibility for harm.',
+  },
 ];
 
-export default function PhaseOneHome() {
+export default function CourseIntroductionPage() {
+  const listEnabled =
+    process.env.WAITLIST_ENABLED === 'true' &&
+    !!process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY &&
+    !!process.env.TURNSTILE_SECRET_KEY &&
+    !!process.env.PUBLIC_CONTACT_EMAIL;
+
   return (
-    <main className="w-full overflow-hidden bg-[#0C1719] text-[#F8F2EA]">
-      <section className="relative overflow-hidden border-b border-white/10">
-        <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(ellipse_at_76%_15%,rgba(187,212,197,0.14),transparent_39%),radial-gradient(ellipse_at_15%_85%,rgba(237,174,157,0.11),transparent_40%)]" />
-        <div className="relative mx-auto max-w-7xl px-6 py-20 sm:py-28 lg:py-32 grid lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-16 items-center">
-          <div>
-            <p className="mb-7 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-[#BBD4C5]">
-              <span className="h-px w-9 bg-[#BBD4C5]" /> A new way of understanding
+    <main className="w-full overflow-hidden bg-[#F4F0E9] text-[#172126]">
+      <section className="relative overflow-hidden border-b border-[#7D9286]/15">
+        <div className="absolute inset-0 pointer-events-none opacity-70" aria-hidden="true"
+          style={{ background: 'radial-gradient(ellipse 55% 65% at 95% 20%, rgba(201,193,181,.28), transparent 65%), radial-gradient(ellipse 70% 55% at 0% 98%, rgba(125,146,134,.14), transparent 75%)' }} />
+        <div className="relative mx-auto max-w-7xl grid lg:grid-cols-[1fr_0.92fr] gap-10 lg:gap-14 items-center px-6 pt-16 pb-20 sm:pt-20 sm:pb-24 lg:py-28">
+          <div className="max-w-[655px]">
+            <p className="flex items-center gap-3 text-[10px] sm:text-xs tracking-[0.22em] font-bold uppercase text-[#29433C]">
+              <span className="h-[1px] w-10 bg-[#29433C]" />
+              A signature trauma-literacy course
             </p>
-            <h1 className="font-serif-editorial text-6xl sm:text-7xl lg:text-[6.5rem] leading-[0.94] tracking-tight font-light">
-              Understand<br /><span className="italic text-[#EDAE9D]">more.</span><br />Assume <span className="italic text-[#BBD4C5]">less.</span>
+            <h1 className="font-serif-editorial text-[4.6rem] sm:text-[6.4rem] lg:text-[6.8rem] leading-[0.87] tracking-[-0.04em] font-normal mt-9 text-[#172126]">
+              Humanity<br /><span className="italic text-[#29433C]">Studies</span>
             </h1>
-            <p className="mt-9 max-w-xl text-base sm:text-lg leading-8 text-[#E1DED6]">
-              Behind every behavior is a human story worth understanding. The Human Aftermath™ explores what happens after overwhelming experiences—and what it takes to meet human complexity with context, evidence and care.
+            <p className="font-serif-editorial text-4xl sm:text-5xl lg:text-[3.9rem] leading-[1] mt-6 text-[#7D9286] italic">
+              The Wound Concealed
             </p>
-            <p className="mt-5 text-sm text-[#B5C5C0] max-w-xl leading-7">
-              Our free introduction is available now. The full eight-module foundational course is in development.
+            <div className="mt-8 h-[1px] w-24 bg-[#A86E5D]"/>
+            <p className="font-serif-editorial mt-6 text-2xl sm:text-3xl text-[#172126] leading-snug">
+              Trauma Literacy. <span className="italic text-[#29433C]">Transforming Humanity.</span>
             </p>
-            <div className="mt-9 flex flex-col sm:flex-row items-start gap-3">
-              <a href="#join" className="btn-luxury-primary rounded-full px-7 py-3.5 text-sm inline-flex items-center justify-center gap-3">Get early access <span aria-hidden="true">↗</span></a>
-              <Link href="/starter-kit" className="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/5 px-7 py-3.5 text-sm text-[#F8F2EA] hover:bg-white/10 transition">Explore the free starter guide</Link>
+            <p className="max-w-[555px] mt-6 text-[#46584E] text-base leading-[1.9]">
+              Some wounds form within the human experience. They cannot be seen, stitched, or dressed like an injury to the skin. Their presence—and the complexity of the person living with them—cannot be understood through appearances alone.
+            </p>
+            <p className="max-w-[555px] mt-4 text-[#46584E] text-sm leading-[1.8]">
+              An interdisciplinary exploration of trauma, adaptation, evidence, and the deeper responsibility of understanding human beings. The full course is being prepared; a free introduction is available now.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 mt-9 items-start">
+              <Link href="/starter-kit" className="inline-flex justify-center items-center rounded-xl bg-[#263F59] hover:bg-[#355777] px-7 py-3.5 text-sm font-semibold text-white transition shadow-sm">
+                Read the free starter guide <span aria-hidden="true" className="ml-3">↗</span>
+              </Link>
+              <a href="#early-access" className="inline-flex justify-center items-center rounded-xl border border-[#7D9286]/40 text-[#29433C] hover:bg-[#C9C1B5]/30 px-7 py-3.5 text-sm font-semibold transition">Join the early-access list</a>
             </div>
-            <div className="mt-10 flex items-center gap-3 text-xs text-[#A7B8B3]">
-              <span className="h-2 w-2 rounded-full bg-[#BBD4C5]"/><span>Education, not diagnosis. Curiosity, not assumptions.</span>
+            <div className="mt-12 flex items-center gap-3 text-xs uppercase tracking-[0.17em] font-semibold text-[#7D9286]">
+              <span className="inline-block h-2 w-2 rounded-xl bg-[#A86E5D]" />
+              Understand more. Assume less.
             </div>
           </div>
-          <div className="relative mx-auto w-full max-w-[470px] min-h-[510px] sm:min-h-[560px] flex items-center justify-center" aria-label="Editorial cover artwork for The Human Aftermath">
-            <div className="absolute inset-8 rounded-full border border-[#BBD4C5]/20 rotate-12" />
-            <div className="absolute inset-16 rounded-full border border-[#EDAE9D]/15 -rotate-12" />
-            <div className="absolute h-[340px] w-[300px] rounded-[50%] bg-[#617B8A]/45 blur-sm -rotate-[35deg]" />
-            <div className="absolute h-[340px] w-[270px] rounded-[50%] bg-[#EDAE9D]/40 blur-[2px] rotate-[30deg]" />
-            <div className="absolute h-[290px] w-[260px] rounded-[50%] bg-[#BBD4C5]/45 blur-sm rotate-[78deg]" />
-            <div className="relative z-10 aspect-[4/5] w-[82%] rounded-[2px] border border-[#F9F0E5]/25 bg-[#193A39]/85 shadow-[25px_28px_65px_rgba(0,0,0,0.4)] flex flex-col justify-between p-9 sm:p-10">
-              <div className="flex justify-between items-center border-b border-[#F9F0E5]/25 pb-5 text-[10px] tracking-[0.22em] uppercase">
-                <span>The Human Aftermath™</span><span>Volume 01</span>
-              </div>
-              <div className="relative z-10 my-12">
-                <div className="relative mx-auto h-52 w-52 mb-12">
-                  <div className="absolute inset-4 rounded-[50%] bg-[#EDAE9D]/80 rotate-[-37deg] mix-blend-screen" />
-                  <div className="absolute inset-3 rounded-[50%] bg-[#BBD4C5]/65 rotate-[44deg] mix-blend-screen" />
-                  <div className="absolute inset-7 rounded-[50%] bg-[#617B8A]/70 rotate-[90deg] mix-blend-screen" />
+          <div className="max-w-[550px] mx-auto w-full lg:-mr-2">
+            <InnerExperienceArt />
+            <p className="mt-3 text-center text-[10px] uppercase tracking-[0.2em] text-[#7D9286]">The seen · The experienced · The unexplained</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#29433C] text-[#F4F0E9] px-6 py-20 sm:py-28">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-20 items-start">
+          <div>
+            <p className="text-[#C9C1B5] text-[11px] uppercase font-semibold tracking-[0.23em]">The meaning behind the title</p>
+            <h2 className="font-serif-editorial text-5xl sm:text-6xl leading-[1.02] mt-6 font-light">
+              Not every wound <span className="italic text-[#A86E5D]">exists on the surface.</span>
+            </h2>
+          </div>
+          <div className="text-[#E0DED4] leading-[1.95] text-base md:pt-10">
+            <p>We know how to recognize a physical wound. We can often locate it, examine it and offer wound care. But some of the deepest forms of pain emerge internally—from experiences that shape a person's sense of safety, memory, relationships, or response to the world.</p>
+            <p className="mt-6">The Wound Concealed refers to pain that cannot be cared for with a physical dressing because it formed within experience itself. That does not mean every person carries trauma, or every unfamiliar behavior is evidence of a hidden wound.</p>
+            <p className="mt-6 text-[#F4F0E9] font-medium">It means we must not confuse what we can see with everything there is to understand.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#EBE7DE] px-6 py-20 sm:py-28 text-[#172126]">
+        <div className="max-w-6xl mx-auto">
+          <div className="max-w-3xl">
+            <p className="text-[#29433C] text-[11px] uppercase font-bold tracking-[0.23em]">The learning method</p>
+            <h2 className="font-serif-editorial text-5xl sm:text-6xl leading-[1.05] mt-5">
+              From trauma literacy to <span className="italic text-[#29433C]">human literacy.</span>
+            </h2>
+            <p className="text-[#46584E] leading-[1.9] mt-6 max-w-2xl">
+              Learning the science is where we begin. What matters is how we use it: asking better questions, recognizing what we cannot know, and responding to people without reducing them to a diagnosis or a single visible action.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-[#C9C1B5] mt-12 border border-[#C9C1B5]">
+            {principles.map(item => (
+              <div key={item.index} className="bg-[#F4F0E9] min-h-72 p-7 flex flex-col">
+                <div className="flex items-center justify-between">
+                  <span className="font-serif-editorial text-4xl italic text-[#29433C]">{item.index}</span>
+                  <span className="text-[#7D9286] text-[10px] tracking-[0.18em] uppercase">{item.label}</span>
                 </div>
-                <h2 className="font-serif-editorial text-5xl leading-[0.9] font-light">The Human<br /><span className="italic">Aftermath</span></h2>
-                <p className="uppercase tracking-[0.17em] mt-5 text-[10px] text-[#C8D8D0]">A foundation for human literacy</p>
-              </div>
-              <div className="border-t border-[#F9F0E5]/25 pt-5 text-[11px] tracking-[0.14em] uppercase text-[#EACBD4]">Understand more · Assume less</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#F3EFE7] text-[#182B2D] px-6 py-20 sm:py-28">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-[0.8fr_1.2fr] gap-12 items-start">
-            <div>
-              <p className="text-xs uppercase tracking-[0.22em] text-[#58716E] font-bold">The philosophy</p>
-              <h2 className="font-serif-editorial text-5xl sm:text-6xl mt-5 leading-[1.03]">No single lens tells the <span className="italic text-[#3E6892]">whole story.</span></h2>
-            </div>
-            <div className="text-lg text-[#344748] leading-9 pt-4">
-              <p>We can acknowledge what happened without assuming how someone experienced it. We can recognize adaptation without treating people as permanently damaged. We can honor emotional reality while still asking careful questions about evidence.</p>
-              <p className="mt-6 text-base">This learning experience brings neuroscience, psychology, relationships, social context and lived experience into conversation—without pretending they are interchangeable.</p>
-            </div>
-          </div>
-          <div className="grid md:grid-cols-3 gap-4 mt-16">
-            {values.map(item => (
-              <div key={item.number} className="border border-[#C5D1CA] bg-white/60 p-7 min-h-[240px]">
-                <p className="text-xs text-[#647D79] font-semibold tracking-widest">{item.number}</p>
-                <h3 className="font-serif-editorial text-3xl mt-6">{item.title}</h3>
-                <p className="text-sm leading-7 mt-4 text-[#455454]">{item.body}</p>
+                <h3 className="font-serif-editorial text-3xl leading-[1.1] mt-8">{item.title}</h3>
+                <p className="text-[#4D5D54] text-sm leading-[1.8] mt-5">{item.description}</p>
               </div>
             ))}
           </div>
+          <p className="mt-8 text-sm text-[#5D6C5F]">Human literacy is not the ability to diagnose strangers. It is a commitment to context, evidence, humility, dignity and responsible action.</p>
         </div>
       </section>
 
-      <section id="preview" className="px-6 py-20 sm:py-28 bg-[#111F22]">
+      <section id="course" className="px-6 py-20 sm:py-28 bg-[#F4F0E9] scroll-mt-20">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-wrap gap-8 justify-between items-end mb-10">
+          <div className="grid lg:grid-cols-[1fr_0.75fr] gap-8 items-end mb-12">
             <div>
-              <p className="text-xs uppercase tracking-[0.22em] text-[#BBD4C5] font-bold">The forthcoming program</p>
-              <h2 className="font-serif-editorial text-5xl sm:text-6xl mt-5 font-light">Eight chapters of <span className="italic text-[#EDAE9D]">understanding.</span></h2>
+              <p className="text-[#29433C] text-[11px] tracking-[0.22em] font-bold uppercase">The course · In development</p>
+              <h2 className="font-serif-editorial text-5xl sm:text-6xl leading-[1.06] mt-5 text-[#172126]">Eight modules.<br/><span className="italic text-[#29433C]">One wider lens.</span></h2>
             </div>
-            <span className="text-sm text-[#C8D8D0] border border-[#BBD4C5]/35 px-4 py-2 rounded-full">8 modules · 65 lessons planned</span>
+            <div className="text-[#4D5D54] text-sm leading-[1.9] lg:pb-2">
+              The foundation combines neuroscience, psychology, development, relationships, culture, evidence and systems thinking. The eight-module curriculum currently contains 65 lessons; the platform is still being completed and tested.
+            </div>
           </div>
-          <p className="text-stone-300 max-w-3xl leading-8 mb-10">The full course is being engineered and reviewed. This preview describes its learning architecture; enrollment and certification are not open in Phase 1.</p>
-          <div className="grid md:grid-cols-2 gap-3">
-            {modules.map(([num, title, subtitle]) => (
-              <div key={num} className="group border border-white/10 bg-white/[0.035] px-6 py-5 flex gap-5 items-start hover:border-[#BBD4C5]/40 transition">
-                <span className="font-serif-editorial italic text-3xl text-[#EDAE9D]">{num}</span>
-                <div><h3 className="font-serif-editorial text-2xl text-[#F8F2EA]">{title}</h3><p className="mt-1 text-sm text-stone-400">{subtitle}</p></div>
+          <div className="grid md:grid-cols-2 gap-x-10 border-t border-[#C9C1B5]">
+            {modules.map(item => (
+              <div className="flex gap-5 py-6 border-b border-[#C9C1B5] items-start" key={item.number}>
+                <span className="font-serif-editorial text-3xl italic text-[#29433C] shrink-0 w-11">{item.number}</span>
+                <div>
+                  <h3 className="font-serif-editorial text-2xl sm:text-[1.85rem] leading-tight text-[#29433C]">{item.title}</h3>
+                  <p className="text-[#55665A] text-sm leading-[1.7] mt-2">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
+          <div className="mt-10 border-l-[3px] border-[#A86E5D] pl-5 text-sm text-[#55665A] leading-[1.85] max-w-4xl">
+            The course will pair lesson texts with narrated and video materials, visual frameworks, applied scenarios, knowledge checks and a participant workbook. These features are under integration and review; no completed course or certificate is being sold during this phase.
+          </div>
         </div>
       </section>
 
-      <section className="px-6 py-20 sm:py-28 bg-[#E9E1D8] text-[#183034]">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          <div className="relative mx-auto w-full max-w-[470px]">
-            <div className="absolute -inset-5 bg-[#BBD4C5]/50 rotate-[-3deg]" aria-hidden="true"/>
-            <div className="relative bg-[#183D38] text-[#F5F0E7] p-10 shadow-2xl aspect-[4/5] flex flex-col justify-between">
-              <p className="uppercase tracking-[0.2em] text-[10px] border-b border-[#FFFFFF]/30 pb-5">The Human Aftermath™ / learning library</p>
-              <div><span className="font-serif-editorial italic text-3xl text-[#EDAE9D]">The Learning Companion</span><div className="my-8 border border-[#BBD4C5]/40 rounded-full w-40 h-40 mx-auto relative"><div className="absolute rounded-full bg-[#EDAE9D]/50 w-28 h-28 top-5 left-3"/><div className="absolute rounded-full bg-[#BBD4C5]/50 w-28 h-28 top-5 right-3"/></div><h3 className="font-serif-editorial text-5xl leading-none">The Participant<br/>Workbook</h3></div>
-              <p className="text-xs uppercase tracking-[0.18em] text-[#D2DAD2]">The full workbook accompanies the course</p>
+      <section className="bg-[#172126] px-6 py-20 sm:py-28 text-[#F4F0E9]">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-[#A86E5D] text-[11px] uppercase font-bold tracking-[0.23em]">The long-term vision</p>
+          <h2 className="font-serif-editorial text-5xl sm:text-6xl leading-[1.03] mt-5 max-w-4xl">One foundational course.<br/><span className="italic text-[#C9C1B5]">A larger educational future.</span></h2>
+          <div className="grid lg:grid-cols-2 gap-5 mt-12">
+            <article className="border border-[#C9C1B5]/25 bg-white/[0.045] p-8 sm:p-10">
+              <div className="text-[#A86E5D] tracking-[0.19em] uppercase text-[10px] font-semibold">01 / The course</div>
+              <h3 className="font-serif-editorial text-4xl mt-5">Humanity Studies:<br/><span className="italic">The Wound Concealed</span></h3>
+              <p className="text-[#E5E3D9] text-sm leading-[1.9] mt-6">The first learning experience uses trauma literacy to develop critical reasoning, richer context and humane, accountable interpretation of behavior.</p>
+            </article>
+            <article className="border border-[#A86E5D]/30 bg-white/[0.045] p-8 sm:p-10">
+              <div className="text-[#A86E5D] tracking-[0.19em] uppercase text-[10px] font-semibold">02 / The academy · Future vision</div>
+              <h3 className="font-serif-editorial text-4xl mt-5">A home for the <span className="italic text-[#C9C1B5]">study of humanity.</span></h3>
+              <p className="text-[#E5E3D9] text-sm leading-[1.9] mt-6">The envisioned academy—whose name has not yet been selected—could eventually offer learning pathways in perception, relationships, development, communication, human systems and institutional decision-making.</p>
+            </article>
+          </div>
+          <p className="mt-7 text-[#D8D7CD] text-xs leading-[1.8]">The academy is a future concept, not an existing accredited institution. The foundational course is educational and does not confer clinical licensure or approved continuing-education credit.</p>
+        </div>
+      </section>
+
+      <section className="px-6 py-20 sm:py-28 bg-[#C9C1B5]/[0.50] text-[#172126]">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-[0.78fr_1.22fr] gap-12 lg:gap-20 items-center">
+          <div className="relative max-w-[355px] mx-auto w-full" aria-label="A typographic preview of the free Human Literacy Starter Guide">
+            <div className="absolute inset-0 translate-x-4 translate-y-4 border border-[#7D9286]/35 bg-[#C9C1B5]/60 -rotate-3" aria-hidden="true"/>
+            <div className="relative min-h-[450px] p-9 bg-[#29433C] text-[#F4F0E9] border border-[#29433C] shadow-sm flex flex-col justify-between">
+              <span className="tracking-[0.18em] uppercase text-[10px] text-[#C9C1B5]">Humanity Studies · Free companion</span>
+              <div>
+                <div className="w-28 h-28 rounded-xl border border-[#A86E5D] relative mx-auto my-7">
+                  <div className="absolute inset-4 rounded-[47%_53%_54%_46%] border border-[#C9C1B5] rotate-12"/>
+                  <div className="absolute inset-7 rounded-[54%_46%_48%_52%] border-2 border-[#A86E5D] -rotate-12"/>
+                  <div className="absolute inset-[43px] rounded-xl bg-[#A86E5D]"/>
+                </div>
+                <h3 className="font-serif-editorial text-5xl leading-[0.95]">A First Step<br/><span className="italic text-[#A86E5D]">Toward Human Literacy</span></h3>
+              </div>
+              <span className="border-t border-white/20 pt-4 text-xs text-[#C9C1B5]">Understand More. Assume Less.</span>
             </div>
           </div>
           <div>
-            <p className="text-xs uppercase tracking-[0.22em] font-bold text-[#567473]">Start before the course opens</p>
-            <h2 className="font-serif-editorial text-5xl sm:text-6xl leading-[1.03] mt-5">A first step toward <span className="italic text-[#3E6892]">human literacy.</span></h2>
-            <p className="text-base leading-8 mt-7 text-[#425757]">Explore a free, printable starter guide introducing the Event–Experience–Response framework, more careful ways to interpret behavior, and practical language for meeting complexity with curiosity.</p>
-            <div className="mt-7 border-l-2 border-[#DA937D] pl-5 text-sm leading-7 text-[#4A5B5A]">No diagnosis. No personal trauma history required. No pressure to disclose or complete a reflection.</div>
-            <Link href="/starter-kit" className="inline-flex mt-9 rounded-full bg-[#183D38] text-white px-7 py-3.5 text-sm font-semibold hover:bg-[#29524B] transition">Open the free starter guide ↗</Link>
-            <p className="text-sm text-[#637474] mt-5">The complete 69-page participant workbook is reserved for the finished learning experience.</p>
+            <p className="text-[#29433C] text-[11px] uppercase tracking-[0.2em] font-bold">Free · No account needed</p>
+            <h2 className="font-serif-editorial text-5xl sm:text-6xl leading-[1.04] mt-5">Begin with a <span className="italic text-[#29433C]">better question.</span></h2>
+            <p className="text-[#4F5D66] leading-[1.9] mt-7">Before the complete course launches, explore a printable introduction to the Event–Experience–Response framework, the distinction between observation and assumption, and the practice of meeting human complexity with care.</p>
+            <p className="mt-5 border-l-[3px] border-[#29433C] pl-5 text-sm text-[#566671] leading-[1.8]">No diagnosis. No demand for personal disclosure. No assumption that every behavior reflects an unseen injury.</p>
+            <Link href="/starter-kit" className="inline-flex mt-8 rounded-xl bg-[#29433C] hover:bg-[#385B7D] text-white text-sm font-semibold px-7 py-3.5 transition">Open the free learning companion <span className="ml-3" aria-hidden="true">↗</span></Link>
           </div>
         </div>
       </section>
 
-      <section id="join" className="px-6 py-20 sm:py-28 bg-[#101B1E] scroll-mt-20">
-        <div className="mx-auto max-w-6xl grid lg:grid-cols-[1.1fr_0.9fr] gap-14 items-center">
+      <section id="early-access" className="px-6 py-20 sm:py-28 bg-[#172126] text-[#F4F0E9] scroll-mt-20">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-[1.07fr_0.93fr] gap-12 lg:gap-16 items-center">
           <div>
-            <p className="text-xs uppercase tracking-[0.23em] text-[#BBD4C5] font-bold">Invitation · Phase 1</p>
-            <h2 className="font-serif-editorial text-6xl sm:text-7xl leading-[0.98] mt-5">Be here for<br/><span className="italic text-[#EDAE9D]">what comes next.</span></h2>
-            <p className="text-stone-300 leading-8 mt-7 max-w-xl">Join the early-access list for development milestones, free educational resources, and invitations to future learning opportunities. There is no paid enrollment today.</p>
-            <div className="mt-9 grid sm:grid-cols-3 gap-4 text-sm">
-              <div className="border-t border-[#BBD4C5]/35 pt-3"><span className="text-[#BBD4C5] block text-xs mb-2 uppercase tracking-wider">First</span>Free learning previews</div>
-              <div className="border-t border-[#BBD4C5]/35 pt-3"><span className="text-[#BBD4C5] block text-xs mb-2 uppercase tracking-wider">Next</span>Private pilot invitations</div>
-              <div className="border-t border-[#BBD4C5]/35 pt-3"><span className="text-[#BBD4C5] block text-xs mb-2 uppercase tracking-wider">Later</span>Full course enrollment</div>
+            <p className="text-[#C9C1B5] text-xs uppercase tracking-[0.22em] font-semibold">Phase 1 · An open invitation</p>
+            <h2 className="font-serif-editorial text-6xl sm:text-7xl leading-[0.98] mt-6">The first chapter <span className="italic text-[#A86E5D]">is just beginning.</span></h2>
+            <p className="text-[#D8D7CD] leading-[1.9] mt-7 max-w-xl">Follow the course as it develops, discover new free learning resources, and hear when private pilot invitations or future enrollment opportunities become available.</p>
+            <p className="mt-6 font-serif-editorial text-2xl italic text-[#C9C1B5]">Trauma Literacy. Transforming Humanity.</p>
+            <div className="mt-8 border-t border-[#7D9286]/50 pt-5 flex gap-3 text-xs text-[#C9C1B5] leading-6">
+              <span className="h-2 w-2 bg-[#A86E5D] rounded-full mt-2 shrink-0"/><span>Enrollment is not open. The full platform, assessments and credential systems are being completed and reviewed.</span>
             </div>
           </div>
-          <div className="border border-white/15 bg-[#1A2D2D] p-7 sm:p-9 shadow-2xl rounded-[2px]">
-            <p className="text-xs uppercase tracking-[0.18em] text-[#EDAE9D] font-bold">Early access</p>
-            <h3 className="font-serif-editorial text-4xl mt-3 mb-5">Join the invitation list.</h3>
-            <WaitlistForm enabled={process.env.WAITLIST_ENABLED === 'true' && !!process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && !!process.env.TURNSTILE_SECRET_KEY && !!process.env.PUBLIC_CONTACT_EMAIL}/>
+          <div className="border border-[#7D9286]/40 bg-[#29433C] p-7 sm:p-9 shadow-sm">
+            <p className="text-[11px] uppercase tracking-[0.18em] text-[#A86E5D] font-bold">Early-access invitation list</p>
+            <h3 className="font-serif-editorial text-4xl mt-4 mb-6">Be part of what comes next.</h3>
+            <WaitlistForm enabled={listEnabled}/>
           </div>
         </div>
       </section>
 
-      <footer className="bg-[#0A1114] border-t border-white/10 px-6 py-10">
-        <div className="mx-auto max-w-6xl flex flex-wrap justify-between gap-5 items-center text-xs text-stone-400">
-          <div><span className="font-serif-editorial text-xl text-[#F8F2EA]">The Human Aftermath™</span><p className="mt-2">Understanding trauma, adaptation, connection & recovery across the human experience.</p></div>
-          <div className="flex items-center gap-5"><Link href="/starter-kit" className="hover:text-white">Free starter guide</Link><Link href="/privacy" className="hover:text-white">Privacy</Link><a href="#join" className="hover:text-white">Early access</a></div>
+      <footer className="px-6 py-11 border-t border-[#7D9286]/20 bg-[#172126] text-[#C9C1B5]">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:justify-between gap-8">
+          <div>
+            <p className="font-serif-editorial text-2xl text-[#F4F0E9]">Humanity Studies: <span className="italic text-[#A86E5D]">The Wound Concealed</span></p>
+            <p className="text-xs uppercase tracking-[0.17em] text-[#C9C1B5] mt-3">Trauma Literacy. Transforming Humanity.</p>
+          </div>
+          <nav aria-label="Footer" className="flex flex-wrap gap-x-6 gap-y-3 text-xs">
+            <Link href="/starter-kit" className="hover:text-white">Free starter guide</Link>
+            <Link href="/privacy" className="hover:text-white">Privacy notice</Link>
+            <a href="#early-access" className="hover:text-white">Early access</a>
+          </nav>
         </div>
-        <div className="mx-auto max-w-6xl mt-8 pt-5 border-t border-white/10 text-xs text-stone-500 leading-6">Educational content only. Not a substitute for mental-health treatment, diagnosis, crisis services, or professional clinical training.</div>
+        <p className="max-w-6xl mx-auto mt-8 pt-6 border-t border-white/10 text-xs leading-7 text-[#C9C1B5]">An interdisciplinary educational project, not therapy, diagnosis, crisis intervention, clinical certification or accredited continuing education. The academy is a future vision.</p>
       </footer>
     </main>
   );
