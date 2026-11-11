@@ -1,6 +1,11 @@
-# The Human Aftermath™ — Phase 1 launch kit
+# Humanity Studies: The Wound Concealed — Phase 1 launch kit
 **Prepared:** November 10, 2026  
 **Release:** Public introduction + free educational guide + voluntary email waitlist. **NOT** paid enrollment or access to the unfinished learner course.
+
+## Course identity and academy distinction
+**Signature course:** Humanity Studies: The Wound Concealed. **Tagline:** Trauma Literacy. Transforming Humanity. **Guiding philosophy:** Understand More. Assume Less.
+
+The concealed wound refers to psychological pain that forms within experience and cannot be treated with conventional physical wound care. This is **not** a claim that every human behavior stems from trauma. The academy is a separate future vision whose name has not been finalized.
 
 ## Product promise (approved source-aligned language)
 **Headline:** Understand More. Assume Less.  
@@ -41,37 +46,37 @@
 
 **Announcement — short**
 > **Understand more. Assume less.**  
-> The Human Aftermath™ is taking shape: a new educational experience about trauma, adaptation, connection and what it means to meet human complexity with care.  
+> Humanity Studies: The Wound Concealed is taking shape: a new educational experience about trauma, adaptation, connection and what it means to meet human complexity with care.  
 > The free Human Literacy Starter Guide is available now. Explore the guide and join the early-access list for future learning invitations.  
 > [Insert verified public URL]  
 > This is education, not therapy or diagnosis. No personal story required.
 
 **Announcement — long**
 > What if we stopped assuming we knew the reason behind every human response?  
-> The Human Aftermath™ explores a different way of learning—one that considers biology, memory, development, relationships, culture, environment, and the limits of any single explanation.  
+> Humanity Studies: The Wound Concealed explores a different way of learning—one that considers biology, memory, development, relationships, culture, environment, and the limits of any single explanation.  
 > While the full interactive course is being completed, we're opening the first chapter of the experience: a free, printable Human Literacy Starter Guide.  
 > You can explore it without an account and without sharing anything personal. If you'd like updates on the foundational course, join our voluntary invitation list.  
 > [Insert verified public URL]
 
 **Landing-page meta summary**
-> The Human Aftermath™ — Understand More. Assume Less. Explore the free Human Literacy Starter Guide and join the early-access list for our forthcoming multidisciplinary foundational course.
+> Humanity Studies: The Wound Concealed — Understand More. Assume Less. Explore the free Human Literacy Starter Guide and join the early-access list for our forthcoming multidisciplinary foundational course.
 
 ## Suggested email sequence (COPY ONLY — not activated)
 
 **Email 1: Welcome (after your email provider is configured and consent confirmed)**  
 **Subject:** Your first step toward human literacy  
-Thank you for your interest in The Human Aftermath™. We're building an educational space devoted to better questions, richer context, and more responsible ways of understanding human experience.  
+Thank you for your interest in Humanity Studies: The Wound Concealed. We're building an educational space devoted to better questions, richer context, and more responsible ways of understanding human experience.  
 Your free starter guide is available here: [verified starter-guide link]. You can use it privately, print it, or simply read and reflect. No disclosure is required.  
 We'll share thoughtful updates as the course takes shape. You can unsubscribe using the link in any email.
 
 **Email 2: What makes this different (several days later)**  
 **Subject:** What do we actually know about a person's response?  
 A behavior can be real and observable without revealing its cause. We can know that someone withdrew from a conversation without knowing whether they were exhausted, distracted, worried, overwhelmed, or simply taking time to think.  
-The Human Aftermath™ uses the Event–Experience–Response distinction to help learners practice curiosity without making unsupported assumptions.  
+Humanity Studies: The Wound Concealed uses the Event–Experience–Response distinction to help learners practice curiosity without making unsupported assumptions.  
 If you haven't explored the free guide yet: [verified starter-guide link].
 
 **Email 3: Future learning invitation (only when beta readiness is independently verified)**  
-**Subject:** An invitation to help shape The Human Aftermath™  
+**Subject:** An invitation to help shape Humanity Studies: The Wound Concealed  
 We're preparing a limited private learning pilot. Participants will help us test clarity, navigation, educational activities and overall learner experience.  
 If you're interested, review the pilot details and voluntary participation requirements here: [verified application link]. No personal trauma history or diagnostic information is required.  
 Please note that pilot learning is distinct from a completed commercial course and credentials are not issued until verified systems are ready.
