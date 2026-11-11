@@ -48,25 +48,25 @@ export default function GlobalHeader() {
   const publicLanding = pathname === '/' || pathname === '/starter-kit' || pathname === '/privacy';
   if (publicLanding) {
     return (
-      <header className="phase1-header sticky top-0 z-40 border-b border-[#617B8A]/20 bg-[#FAF6F7]/95 backdrop-blur-xl text-[#172126]">
+      <header className="phase1-header sticky top-0 z-40 border-b border-[#7D9286]/20 bg-[#F4F0E9]/95 backdrop-blur-xl text-[#172126]">
         <div className="max-w-7xl mx-auto px-5 sm:px-7 min-h-20 py-2 flex items-center justify-between gap-5">
           <Link href="/" className="flex items-center gap-3 shrink min-w-0 group">
-            <span aria-hidden="true" className="relative w-10 h-10 shrink-0 rounded-full border border-[#3E6892]/70 flex items-center justify-center">
-              <span className="absolute inset-[6px] rounded-[45%_55%_53%_47%] border border-[#EDAE9D] rotate-12" />
-              <span className="absolute inset-[11px] rounded-full border border-[#617B8A] -rotate-12" />
-              <span className="h-[5px] w-[5px] rounded-full bg-[#EDAE9D]" />
+            <span aria-hidden="true" className="relative w-10 h-10 shrink-0 rounded-[14px] border border-[#29433C]/70 flex items-center justify-center">
+              <span className="absolute inset-[6px] rounded-[45%_55%_53%_47%] border border-[#A86E5D] rotate-12" />
+              <span className="absolute inset-[11px] rounded-full border border-[#7D9286] -rotate-12" />
+              <span className="h-[5px] w-[5px] rounded-[14px] bg-[#A86E5D]" />
             </span>
             <span className="min-w-0">
-              <span className="block font-brand-title text-[11px] sm:text-sm tracking-[0.09em] text-[#253E56] font-bold leading-tight">HUMANITY STUDIES</span>
-              <span className="block font-serif-editorial text-[15px] sm:text-lg leading-tight italic text-[#3E6892]">The Wound Concealed</span>
+              <span className="block font-brand-title text-[11px] sm:text-sm tracking-[0.09em] text-[#29433C] font-bold leading-tight">HUMANITY STUDIES</span>
+              <span className="block font-serif-editorial text-[15px] sm:text-lg leading-tight italic text-[#29433C]">The Wound Concealed</span>
             </span>
           </Link>
           <nav aria-label="Public site navigation" className="hidden lg:flex items-center gap-7 text-xs font-semibold tracking-wide text-[#384F60]">
-            <Link href="/#course" className="hover:text-[#3E6892] transition">Explore the course</Link>
-            <Link href="/starter-kit" className="hover:text-[#3E6892] transition">Free starter guide</Link>
-            <Link href="/#early-access" className="hover:text-[#3E6892] transition">Early access</Link>
+            <Link href="/#course" className="hover:text-[#29433C] transition">Explore the course</Link>
+            <Link href="/starter-kit" className="hover:text-[#29433C] transition">Free starter guide</Link>
+            <Link href="/#early-access" className="hover:text-[#29433C] transition">Early access</Link>
           </nav>
-          <Link href="/#early-access" className="rounded-full border border-[#3E6892]/65 px-4 sm:px-5 py-2.5 text-[11px] sm:text-xs font-semibold text-[#253E56] hover:bg-[#253E56] hover:text-white transition shrink-0">Early access <span aria-hidden="true">↗</span></Link>
+          <Link href="/#early-access" className="rounded-full border border-[#29433C]/65 px-4 sm:px-5 py-2.5 text-[11px] sm:text-xs font-semibold text-[#29433C] hover:bg-[#29433C] hover:text-white transition shrink-0">Early access <span aria-hidden="true">↗</span></Link>
         </div>
       </header>
     );
