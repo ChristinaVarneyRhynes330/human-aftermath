@@ -15,6 +15,6 @@
   .starter-guide .guide-page { break-after: page; min-height: 9in; }
   .starter-guide .guide-page:last-child { break-after: auto; }
   .starter-guide h1, .starter-guide h2, .starter-guide h3, .starter-guide p, .starter-guide li, .starter-guide label { color: #172126 !important; }
-  .starter-guide .guide-write { min-height: 0.75in; border-bottom: 1px solid #617B8A !important; }
-  .starter-guide .guide-dark { background: #F1E9EC !important; border:1px solid #B8C5D0 !important; color:#172126 !important; }
+  .starter-guide .guide-write { min-height: 0.75in; border-bottom: 1px solid #7D9286 !important; }
+  .starter-guide .guide-dark { background: #EBE7DE !important; border:1px solid #B8C5D0 !important; color:#172126 !important; }
 }
